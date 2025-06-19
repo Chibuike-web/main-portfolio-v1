@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+:root {
+	/* Colors */
+	--gray-500: hsl(225, 9%, 48%);
+	--gray-700: hsl(222, 16%, 19%);
+
+	/* Typography */
+	--primary: Geist;
+	--mono: "Geist Mono";
+}
+
+@theme {
+	/* Colors */
+
+	--color-gray-500: var(--gray-500);
+	--color-gray-700: var(--gray-700);
+
+	/* Typography */
+
+	--font-primary: var(--primary);
+	--font-secondary: var(--mono);
+}
+
+body {
+	font-family: Geist;
+}
