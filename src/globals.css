@@ -24,4 +24,6 @@
 
 body {
 	font-family: Geist;
+	line-height: 1.2;
+	min-width: 0;
 }
