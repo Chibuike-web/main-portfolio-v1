@@ -2,6 +2,7 @@
 
 :root {
 	/* Colors */
+	--gray-100: hsl(210, 30%, 96%);
 	--gray-500: hsl(225, 9%, 48%);
 	--gray-700: hsl(222, 16%, 19%);
 
@@ -13,17 +14,17 @@
 @theme {
 	/* Colors */
 
+	--color-gray-100: var(--gray-100);
 	--color-gray-500: var(--gray-500);
 	--color-gray-700: var(--gray-700);
 
 	/* Typography */
-
 	--font-primary: var(--primary);
 	--font-secondary: var(--mono);
 }
 
 body {
-	font-family: Geist;
+	font-family: var(--primary);
 	line-height: 1.2;
 	min-width: 0;
 }

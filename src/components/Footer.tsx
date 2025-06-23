@@ -4,7 +4,7 @@ import { handleCopy } from "../utils";
 
 export default function Footer() {
 	return (
-		<footer className="py-10 text-gray-700">
+		<footer className="py-10 text-gray-700 bg-gray-100">
 			<div className="mx-auto w-full max-w-[1296px] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
 				<div>
 					<p className="font-semibold text-gray-700 leading-[1.6] max-w-[259px]">
@@ -36,10 +36,26 @@ export default function Footer() {
 					<div className="flex flex-col gap-6 w-full">
 						<p className="font-semibold leading-[1]">Connect</p>
 						<div className="flex flex-col gap-4 leading-[1]">
-							<a href="https://www.linkedin.com/in/chibuike-maduabuchi">Linkedin</a>
-							<a href="https://github.com/Chibuike-web">Github</a>
-							<a href="https://codepen.io/chibuike-web">Codepen</a>
-							<a href="https://dribbble.com/maduabuchichibuike">Dribbble</a>
+							<a
+								href="https://www.linkedin.com/in/chibuike-maduabuchi"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Linkedin
+							</a>
+							<a href="https://github.com/Chibuike-web" target="_blank" rel="noopener noreferrer">
+								Github
+							</a>
+							<a href="https://codepen.io/chibuike-web" target="_blank" rel="noopener noreferrer">
+								Codepen
+							</a>
+							<a
+								href="https://dribbble.com/maduabuchichibuike"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Dribbble
+							</a>
 						</div>
 					</div>
 				</div>
