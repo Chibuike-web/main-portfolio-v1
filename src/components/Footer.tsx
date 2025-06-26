@@ -1,8 +1,20 @@
 import { NavLink } from "react-router";
 import { BackArrowIcon } from "../assets/icons";
 import { handleCopy } from "../utils";
+import { useState } from "react";
 
 export default function Footer() {
+	const [copyStatus, setCopyStatus] = useState("");
+	let timeOutId: number | undefined;
+	const copyEmail = () => {
+		handleCopy(setCopyStatus);
+		if (timeOutId !== undefined) {
+			clearTimeout(timeOutId);
+		}
+		timeOutId = setTimeout(() => {
+			setCopyStatus("");
+		}, 500);
+	};
 	return (
 		<footer className="py-10 text-gray-700 bg-gray-100">
 			<div className="mx-auto w-full max-w-[1296px] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
@@ -64,14 +76,15 @@ export default function Footer() {
 					<div className="flex flex-col gap-2">
 						<p>Let's build something together.</p>
 						<button
-							onClick={() => handleCopy()}
-							className="font-semibold break-words text-left cursor-pointer select-all"
+							onClick={copyEmail}
+							className="font-semibold break-words text-left cursor-pointer select-all w-max"
 						>
 							chibuikemaduabuchi2023@gmail.com
 						</button>
+						{copyStatus && <p>{copyStatus}</p>}
 					</div>
 					<button
-						className="flex gap-[6px] mt-auto items-center"
+						className="flex gap-[6px] mt-auto items-center w-max"
 						onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 					>
 						<BackArrowIcon /> <span className="font-semibold">Back to the top</span>
