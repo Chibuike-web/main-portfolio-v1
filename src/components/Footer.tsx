@@ -1,20 +1,10 @@
 import { NavLink } from "react-router";
 import { BackArrowIcon } from "../assets/icons";
-import { handleCopy } from "../utils";
-import { useState } from "react";
+import { useCopyEmail } from "../Hooks";
 
 export default function Footer() {
-	const [copyStatus, setCopyStatus] = useState("");
-	let timeOutId: number | undefined;
-	const copyEmail = () => {
-		handleCopy(setCopyStatus);
-		if (timeOutId !== undefined) {
-			clearTimeout(timeOutId);
-		}
-		timeOutId = setTimeout(() => {
-			setCopyStatus("");
-		}, 500);
-	};
+	const { copyStatus, copyEmail } = useCopyEmail();
+
 	return (
 		<footer className="py-10 text-gray-700 bg-gray-100">
 			<div className="mx-auto w-full max-w-[1296px] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
@@ -73,15 +63,19 @@ export default function Footer() {
 				</div>
 
 				<div className="flex flex-col gap-14 xl:h-full">
-					<div className="flex flex-col gap-2">
+					<div className="flex flex-col gap-2 relative">
 						<p>Let's build something together.</p>
 						<button
 							onClick={copyEmail}
-							className="font-semibold break-words text-left cursor-pointer select-all w-max"
+							className="font-semibold break-words text-left cursor-pointer select-all w-full"
 						>
 							chibuikemaduabuchi2023@gmail.com
 						</button>
-						{copyStatus && <p>{copyStatus}</p>}
+						{copyStatus && (
+							<span className="p-2 rounded-[8px] left-0 bottom-[-10px] translate-y-1/1 absolute bg-gray-700 text-white w-max leading-[1.2]">
+								{copyStatus}
+							</span>
+						)}
 					</div>
 					<button
 						className="flex gap-[6px] mt-auto items-center w-max"

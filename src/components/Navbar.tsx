@@ -11,11 +11,11 @@ export default function Navbar() {
 const DesktopNav = () => {
 	return (
 		<nav className="border-b border-gray-300 py-[22px]">
-			<header className="mx-auto w-full max-w-[1296px] flex items-center justify-between px-6 xl:px-0">
-				<figure className="w-full max-w-[196px]">
+			<header className="mx-auto w-full max-w-[1296px] grid grid-cols-3 place-items-center gap-6 px-6 xl:px-0">
+				<figure className="w-full">
 					<Logo className="w-auto" />
 				</figure>
-				<div className="bg-gray-100 flex items-center gap-1 p-1 rounded-full">
+				<div className="bg-gray-100 flex items-center w-full max-w-max gap-1 p-1 rounded-full">
 					<NavLink
 						to="/"
 						className={({ isActive }) =>
@@ -45,7 +45,7 @@ const DesktopNav = () => {
 						Resume
 					</a>
 				</div>
-				<div className="flex items-center gap-4 font-semibold">
+				<div className="flex items-center justify-end gap-4 font-semibold w-full">
 					<span>Enugu, Nigeria</span>
 					<span>07:30PM</span>
 				</div>

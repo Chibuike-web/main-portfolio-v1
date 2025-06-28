@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { handleCopy } from "./lib/utils";
 
 export const useMediaQuery = (query: string) => {
 	const [matches, setMatches] = useState(false);
@@ -14,4 +15,23 @@ export const useMediaQuery = (query: string) => {
 	}, [query, matches]);
 
 	return matches;
+};
+
+export const useCopyEmail = () => {
+	const [copyStatus, setCopyStatus] = useState("");
+	let timeOutId: number | undefined;
+	const copyEmail = () => {
+		handleCopy(setCopyStatus);
+		if (timeOutId !== undefined) {
+			clearTimeout(timeOutId);
+		}
+		timeOutId = setTimeout(() => {
+			setCopyStatus("");
+		}, 800);
+	};
+
+	return {
+		copyStatus,
+		copyEmail,
+	};
 };
