@@ -2,6 +2,15 @@ import type { ClassValue } from "clsx";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { v4 as uuidv4 } from "uuid";
+import nomba from "../assets/Nomba.svg";
+import kulipal from "../assets/Kulipal.svg";
+import medibridge from "../assets/Medibridge.svg";
+import zenly from "../assets/Zenly.svg";
+import modimal from "../assets/Modimal.svg";
+import golobe from "../assets/Golobe.svg";
+import sideProject from "../assets/Side-Project.svg";
+import euphoria from "../assets/Euphoria.svg";
+import clicon from "../assets/Clicon.svg";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -19,10 +28,11 @@ export const handleCopy = async (
 	}
 };
 
-type ProjectType = { value: string; link: string };
+export type ProjectType = { value: string; link: string };
 
 type Projects = {
 	id: string;
+	image: string;
 	title: string;
 	subtitle: string;
 	year: number;
@@ -32,70 +42,96 @@ type Projects = {
 
 export const projects: Projects[] = [
 	{
+		image: nomba,
 		title: "Nomba",
 		subtitle: "Bulk Airtime",
 		year: 2024,
-		type: { value: "Case Study", link: "" },
+		type: { value: "Case Study", link: "/bulk-airtime" },
 	},
 	{
+		image: kulipal,
 		title: "Kulipal",
 		subtitle: "Mobile App Redesign",
 		year: 2025,
-		type: { value: "Case Study", link: "" },
+		type: { value: "Case Study", link: "/kulipal-redesign" },
 	},
 	{
+		image: medibridge,
 		title: "Medibridge",
 		subtitle: "AI-Powered EHR",
 		year: 2024,
-		type: { value: "Case Study", link: "" },
+		type: { value: "Case Study", link: "/medibridge" },
 	},
 	{
+		image: zenly,
 		title: "Zenly",
 		subtitle: "Burnout Leave",
 		year: 2024,
-		type: { value: "Case Study", link: "" },
+		type: { value: "Case Study", link: "/zenly" },
 	},
 	{
+		image: modimal,
 		title: "Modimal",
 		subtitle: "Women Clothing Ecommerce Platform",
 		year: 2025,
 		type: [
 			{ value: "Live Site", link: "" },
-			{ value: "Github", link: "" },
+			{ value: "Github", link: "https://github.com/Chibuike-web/Modimal" },
 		],
 	},
 	{
+		image: golobe,
 		title: "Golobe",
 		subtitle: "Travel Booking Platform",
 		year: 2025,
-		type: { value: "Case Study", link: "" },
+		type: [
+			{ value: "Live Site", link: "https://chibuike-web.github.io/Golobe/" },
+			{ value: "Github", link: "https://github.com/Chibuike-web/Golobe" },
+		],
 	},
 
 	{
+		image: sideProject,
 		title: "Side-Project",
 		subtitle: "Movie Search",
 		year: 2025,
-		type: { value: "Github", link: "" },
+		type: {
+			value: "Github",
+			link: "https://github.com/Chibuike-web/Practice-Projects/tree/main/Movie%20Search",
+		},
 	},
 	{
+		image: sideProject,
 		title: "Side-Project",
 		subtitle: "Pdf-Summarizer",
 		year: 2025,
-		type: { value: "Github", link: "" },
+		type: {
+			value: "Github",
+			link: "https://github.com/Chibuike-web/AI-Experiments/tree/main/PDF%20Summarizer",
+		},
 	},
 	{
+		image: sideProject,
 		title: "Side-Project",
 		subtitle: "Remove Background",
 		year: 2025,
-		type: { value: "Github", link: "" },
+		type: {
+			value: "Github",
+			link: "https://github.com/Chibuike-web/AI-Experiments/tree/main/RemoveBg",
+		},
 	},
 	{
+		image: sideProject,
 		title: "Side Project",
 		subtitle: "Recipe Finder",
 		year: 2025,
-		type: { value: "Github", link: "" },
+		type: {
+			value: "Github",
+			link: "https://github.com/Chibuike-web/Practice-Projects/tree/main/Recipe%20Finder",
+		},
 	},
 	{
+		image: euphoria,
 		title: "Euphoria",
 		subtitle: "Ecommerce (Apparels) Website",
 		year: 2025,
@@ -103,7 +139,9 @@ export const projects: Projects[] = [
 		notReady: true,
 	},
 	{
+		image: clicon,
 		title: "Clicon",
+
 		subtitle: "Ecommerce Marketplace Website",
 		year: 2025,
 		type: { value: "Work in Progress", link: "" },

@@ -1,19 +1,34 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import { Link } from "react-router";
+import type { LinkProps } from "react-router";
+
+import { cva } from "class-variance-authority";
 import { cn } from "../lib/utils";
-import type { ButtonHTMLAttributes } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
-export interface ButtonProps
-	extends ButtonHTMLAttributes<HTMLButtonElement>,
-		VariantProps<typeof buttonVariants> {}
+type BaseProps = {
+	className?: string;
+	variant?: "primary" | "outline";
+	size?: "sm" | "md" | "lg";
+	fullWidth?: boolean;
+};
 
-export default function Button({ className, variant, size, fullWidth, ...props }: ButtonProps) {
-	return (
-		<button
-			className={cn(buttonVariants({ variant, size, fullWidth }), className)}
-			disabled={variant === "disabled"}
-			{...props}
-		/>
-	);
+type ButtonAsButton = BaseProps & ButtonHTMLAttributes<HTMLButtonElement> & { as?: "button" };
+type ButtonAsAnchor = BaseProps &
+	AnchorHTMLAttributes<HTMLAnchorElement> & { as: "a"; href: string };
+type ButtonAsLink = BaseProps & LinkProps & { as: "link"; to: string };
+
+type ButtonProps = ButtonAsButton | ButtonAsAnchor | ButtonAsLink;
+
+export default function Button({ className, variant, size, fullWidth, as, ...props }: ButtonProps) {
+	const classes = cn(buttonVariants({ variant, size, fullWidth }), className);
+	if (as === "a") {
+		return <a className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)} />;
+	}
+	if (as === "link") {
+		return <Link className={classes} {...(props as LinkProps)} />;
+	}
+
+	return <button className={classes} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)} />;
 }
 
 const buttonVariants = cva("flex items-center justify-between font-semibold cursor-pointer", {
@@ -21,7 +36,6 @@ const buttonVariants = cva("flex items-center justify-between font-semibold curs
 		variant: {
 			primary: "bg-gray-700 text-white",
 			outline: "border border-gray-500 text-gray-500",
-			disabled: "bg-gray-700 text-white opacity-50",
 		},
 		size: {
 			sm: "h-[36px] pl-[12px] pr-[10px] text-sm",
@@ -36,6 +50,7 @@ const buttonVariants = cva("flex items-center justify-between font-semibold curs
 			variant: "primary",
 			size: "md",
 			fullWidth: true,
+			as: "button",
 		},
 	},
 });

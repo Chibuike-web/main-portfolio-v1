@@ -3,8 +3,8 @@
 :root {
 	/* Colors */
 	--gray-100: hsl(210, 30%, 96%);
-	--gray-500: hsl(225, 9%, 48%);
-	--gray-700: hsl(222, 16%, 19%);
+	--gray-500: hsl(221, 8%, 48%);
+	--gray-700: hsl(220, 15%, 20%);
 
 	/* Typography */
 	--primary: Geist;

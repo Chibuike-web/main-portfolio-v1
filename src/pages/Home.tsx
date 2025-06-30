@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
+import type { ProjectType } from "../lib/utils";
 
 export default function Home() {
 	const { copyStatus, copyEmail } = useCopyEmail();
@@ -56,9 +57,11 @@ export default function Home() {
 			</section>
 			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 my-[52px] md:my-[104px]">
 				{projects.map((item) => (
-					<Card key={item.id}>
+					<Card key={item.id} className={item.notReady ? "opacity-25 cursor-not-allowed" : " "}>
 						<Card.Image>
-							<div className="w-full h-full bg-gray-100"></div>
+							<div className="w-full h-full bg-gray-100">
+								<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+							</div>
 						</Card.Image>
 						<Card.Content>
 							<div className="flex flex-col gap-[10px]">
@@ -67,26 +70,7 @@ export default function Home() {
 								</Card.Title>
 								<Card.SubTitle>{item.subtitle.toUpperCase()}</Card.SubTitle>
 							</div>
-							<div className="flex gap-[10px]">
-								<Button
-									variant={item.notReady ? "disabled" : "primary"}
-									size="md"
-									fullWidth
-									onClick={() => {
-										console.log("Click");
-									}}
-									className={item.notReady ? "flex items-center justify-center" : ""}
-								>
-									{Array.isArray(item.type) ? item.type[0].value : item.type.value}
-									{item.notReady ? "" : <RightArrowIcon fill="white" />}
-								</Button>
-								{Array.isArray(item.type) && (
-									<Button variant="outline" size="md" fullWidth>
-										{item.type[1].value}
-										<RightArrowIcon />
-									</Button>
-								)}
-							</div>
+							<Buttons type={item.type} notReady={item.notReady} />
 						</Card.Content>
 					</Card>
 				))}
@@ -94,3 +78,57 @@ export default function Home() {
 		</div>
 	);
 }
+
+const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notReady?: boolean }) => {
+	return (
+		<>
+			{Array.isArray(type) ? (
+				<div className="flex gap-[10px]">
+					<Button
+						variant="primary"
+						size="md"
+						fullWidth
+						as="a"
+						href={type[0].link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{type[0].value}
+						<RightArrowIcon fill="white" />
+					</Button>
+					<Button
+						variant="outline"
+						size="md"
+						fullWidth
+						as="a"
+						href={type[1].link}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{type[1].value}
+						<RightArrowIcon />
+					</Button>
+				</div>
+			) : type.value === "Case Study" ? (
+				<Button as="link" to={type.link} variant="primary" size="md" fullWidth>
+					{type.value}
+					<RightArrowIcon fill="white" />
+				</Button>
+			) : (
+				<Button
+					as="a"
+					href={type.link}
+					variant="primary"
+					size="md"
+					fullWidth
+					target="_blank"
+					rel="noopener noreferrer"
+					className={notReady ? "flex justify-center" : ""}
+				>
+					{type.value}
+					{!notReady && <RightArrowIcon fill="white" />}
+				</Button>
+			)}
+		</>
+	);
+};
