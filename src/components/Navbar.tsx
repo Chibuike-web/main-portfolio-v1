@@ -83,14 +83,10 @@ const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
 					}
 					onClick={() => setIsOpen(false)}
 				>
-					{({ isActive }) => (
-						<>
-							<span>Work</span>
-							<span>
-								<RightArrowIcon fill={`${isActive ? "#2B303B" : "#717784"}`} />
-							</span>
-						</>
-					)}
+					<span>Work</span>
+					<span>
+						<RightArrowIcon />
+					</span>
 				</NavLink>
 				<NavLink
 					to="/about"
@@ -101,14 +97,10 @@ const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
 					}
 					onClick={() => setIsOpen(false)}
 				>
-					{({ isActive }) => (
-						<>
-							<span>About</span>
-							<span>
-								<RightArrowIcon fill={`${isActive ? "#2B303B" : "#717784"}`} />
-							</span>
-						</>
-					)}
+					<span>About</span>
+					<span>
+						<RightArrowIcon />
+					</span>
 				</NavLink>
 				<a
 					href="/chibuike-maduabuchi-resume.pdf"

@@ -2,15 +2,15 @@ import type { ClassValue } from "clsx";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 import { v4 as uuidv4 } from "uuid";
-import nomba from "../assets/Nomba.svg";
-import kulipal from "../assets/Kulipal.svg";
-import medibridge from "../assets/Medibridge.svg";
-import zenly from "../assets/Zenly.svg";
-import modimal from "../assets/Modimal.svg";
-import golobe from "../assets/Golobe.svg";
-import sideProject from "../assets/Side-Project.svg";
-import euphoria from "../assets/Euphoria.svg";
-import clicon from "../assets/Clicon.svg";
+import nomba from "../assets/home/Nomba.svg";
+import kulipal from "../assets/home/Kulipal.svg";
+import medibridge from "../assets/home/Medibridge.svg";
+import zenly from "../assets/home/Zenly.svg";
+import modimal from "../assets/home/Modimal.svg";
+import golobe from "../assets/home/Golobe.svg";
+import sideProject from "../assets/home/Side-Project.svg";
+import euphoria from "../assets/home/Euphoria.svg";
+import clicon from "../assets/home/Clicon.svg";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));

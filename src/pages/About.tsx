@@ -11,24 +11,23 @@ export default function About() {
 					</h1>
 					<div className="text-gray-500 text-[18px] leading-[1.6] space-y-3.5 col-span-2">
 						<p>
-							I’ve always thought in systems. As a child, I was curious about how parts fit together
-							to form something bigger. That mindset led me to study Civil Engineering.
+							I’ve always been drawn to how things fit together, how small parts connect to create
+							something bigger. That mindset led me to study Civil Engineering.
 						</p>
 						<p>
-							But I became increasingly drawn to the digital world. Unlike the physical one we are
-							born into, the digital world is built by people. Its only limitation is our
-							imagination.
+							Over time, I became more curious about the digital world, a space shaped entirely by
+							people, where the only limits are imagination and intent.
 						</p>
 						<p>
-							That curiosity led me into brand design, where I shaped the visual identities of
-							startups and companies. From there, I moved into digital product design, creating
-							digital solutions that solve everyday problems. Eventually, I began learning to code
-							so I could bring my ideas to life.
+							I started in brand design, crafting the visual identities of startups and early-stage
+							companies. Then I moved into product design, building digital solutions that solve
+							real problems. Along the way, I learned to code so I could prototype, test, and bring
+							ideas to life faster.
 						</p>
 						<p>
-							Now I work at the intersection of design and engineering. I build software that adapts
-							to people, not the other way around. My focus is on accessibility, clarity, and ease
-							of use. I care deeply about systems that are smart, simple, and inclusive.
+							Today, I work at the intersection of design and engineering. I focus on accessibility,
+							clarity, and ease of use, designing systems that adapt to people, not the other way
+							around.
 						</p>
 					</div>
 				</div>

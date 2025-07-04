@@ -20,10 +20,10 @@ export default function Home() {
 						I’m a hybrid of{" "}
 						<span className="font-semibold text-gray-700">designer and developer</span>. I blend{" "}
 						<span className="font-semibold text-gray-700">design and code</span> to build{" "}
-						<span className="font-semibold text-gray-700">beautiful</span> and{" "}
+						<span className="font-semibold text-gray-700">beautiful,</span>{" "}
 						<span>human-centered software</span>
 						that <span className="font-semibold text-gray-700">looks good</span> and{" "}
-						<span>feels good</span> to use.
+						<span className="font-semibold text-gray-700">feels great</span> to use.
 					</p>
 					<div className="flex items-center gap-6">
 						<Button
@@ -39,19 +39,18 @@ export default function Home() {
 								</span>
 							)}
 						</Button>
-						<a
+
+						<Button
+							size="sm"
+							variant="primary"
+							as="a"
 							href="https://www.linkedin.com/in/chibuike-maduabuchi"
 							target="_blank"
 							rel="noopener noreferrer"
+							className="flex gap-[6px] items-center bg-gray-100 text-gray-700"
 						>
-							<Button
-								size="sm"
-								variant="primary"
-								className="flex gap-[6px] items-center bg-gray-100 text-gray-700"
-							>
-								Linkedin <LinkedinLogo />
-							</Button>
-						</a>
+							Linkedin <LinkedinLogo />
+						</Button>
 					</div>
 				</div>
 			</section>
