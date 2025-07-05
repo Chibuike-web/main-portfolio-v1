@@ -9,7 +9,7 @@ export function Card({ className, ...props }: CardProps) {
 interface CardImageProps extends React.HTMLAttributes<HTMLElement> {}
 
 Card.Image = function CardImage({ className, ...props }: CardImageProps) {
-	return <figure className={cn("w-full h-[350px]", className)} {...props} />;
+	return <figure className={cn("w-full h-[250px] sm:h-[350px]", className)} {...props} />;
 };
 
 interface CardContentProps extends React.HtmlHTMLAttributes<HTMLElement> {}

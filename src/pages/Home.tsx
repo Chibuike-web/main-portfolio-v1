@@ -13,7 +13,7 @@ export default function Home() {
 			<section className="grid grid-cols-1 md:grid-cols-3 md:gap-x-6 gap-y-5 md:gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] sm:mt-[104px]">
 				<h1 className="flex flex-col gap-1 font-semibold tracking-[-0.02em] text-[2rem] sm:text-[4rem] col-span-3 lg:col-span-2 text-gray-700">
 					<span>Hi, I’m Chibuike</span>
-					<span>Creative Technologist</span>
+					<span>Design Engineer</span>
 				</h1>
 				<div className="flex flex-col gap-10 col-span-3 lg:col-span-1">
 					<p className="leading-[1.6] text-gray-500 font-medium w-full">
@@ -34,7 +34,7 @@ export default function Home() {
 						>
 							Copy email <CopyIcon />{" "}
 							{copyStatus && (
-								<span className="p-2 rounded-[8px] bottom-[-10px] left-0 translate-y-1/1 absolute bg-gray-700 text-white w-max leading-[1.2]">
+								<span className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700">
 									{copyStatus}
 								</span>
 							)}
@@ -58,9 +58,7 @@ export default function Home() {
 				{projects.map((item) => (
 					<Card key={item.id} className={item.notReady ? "opacity-25 cursor-not-allowed" : " "}>
 						<Card.Image>
-							<div className="w-full h-full bg-gray-100">
-								<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-							</div>
+							<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
 						</Card.Image>
 						<Card.Content>
 							<div className="flex flex-col gap-[10px]">

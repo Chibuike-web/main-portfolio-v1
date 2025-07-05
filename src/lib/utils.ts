@@ -75,7 +75,7 @@ export const projects: Projects[] = [
 		subtitle: "Women Clothing Ecommerce Platform",
 		year: 2025,
 		type: [
-			{ value: "Live Site", link: "" },
+			{ value: "Live Site", link: "https://chibuike-web.github.io/Modimal/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/Modimal" },
 		],
 	},

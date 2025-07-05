@@ -72,7 +72,7 @@ export default function Footer() {
 							chibuikemaduabuchi2023@gmail.com
 						</button>
 						{copyStatus && (
-							<span className="p-2 rounded-[8px] left-0 bottom-[-10px] translate-y-1/1 absolute bg-gray-700 text-white w-max leading-[1.2]">
+							<span className="left-0 bottom-[-10px] translate-y-1/1 absolute text-gray-700">
 								{copyStatus}
 							</span>
 						)}
