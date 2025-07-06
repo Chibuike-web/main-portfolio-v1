@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ScrollToTop from "./ScrollToTop";
 import BulkAirtime from "./pages/BulkAirtime";
+import SmartTicketing from "./pages/SmartTicketing";
 
 export default function App() {
 	const location = useLocation();
@@ -18,6 +19,7 @@ export default function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/bulk-airtime" element={<BulkAirtime />} />
+				<Route path="/smart-ticketing" element={<SmartTicketing />} />
 			</Routes>
 			{(pathname === "/" || pathname === "/about") && <Footer />}
 		</>

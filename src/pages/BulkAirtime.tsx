@@ -33,8 +33,8 @@ export default function BulkAirtime() {
 				<img src={heroImage} alt="" className="w-full h-full object-cover" />
 			</figure>
 
-			<section className="flex flex-col md:flex-row gap-4">
-				<div className="row-span-3 w-full max-w-[416px] text-gray-700 text-[20px] md:text-[24px] font-bold font-secondarys">
+			<section className="flex flex-col md:flex-row gap-6">
+				<div className="row-span-3 w-full max-w-[416px] font-secondary text-gray-700 text-[20px] md:text-[24px] font-bold font-secondarys">
 					NOMBA
 				</div>
 				<div className="grid grid-cols-1 sm:grid-cols-2 max-w-[856px] gap-6">
@@ -102,7 +102,7 @@ export default function BulkAirtime() {
 
 			<section className="mt-[52px] md:mt-[104px]">
 				<div className="flex flex-col gap-[10px]">
-					<h2 className="text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
+					<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
 						Select from contacts
 					</h2>
 					<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mb-6 md:mb-12">
@@ -140,7 +140,7 @@ export default function BulkAirtime() {
 
 			<section className="mt-[52px] md:mt-[104px]">
 				<div className="flex flex-col gap-[10px]">
-					<h2 className="text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
+					<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
 						Enter numbers manually
 					</h2>
 					<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mb-6 md:mb-12">

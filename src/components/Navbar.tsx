@@ -15,11 +15,11 @@ const DesktopNav = () => {
 				<figure className="w-full">
 					<Logo className="w-auto" />
 				</figure>
-				<div className="bg-gray-100 flex items-center w-full max-w-max gap-1 p-1 rounded-full">
+				<div className="bg-gray-100 flex items-center w-full max-w-max gap-1 p-1">
 					<NavLink
 						to="/"
 						className={({ isActive }) =>
-							`w-[112px] h-[36px] flex items-center justify-center text rounded-full ${
+							`w-[112px] h-[36px] flex items-center justify-center text ${
 								isActive ? "bg-white text-gray-700 font-semibold" : "text-gray-500 font-normal"
 							}`
 						}
@@ -29,7 +29,7 @@ const DesktopNav = () => {
 					<NavLink
 						to="/about"
 						className={({ isActive }) =>
-							`w-[112px] h-[36px] flex items-center justify-center text rounded-full ${
+							`w-[112px] h-[36px] flex items-center justify-center text ${
 								isActive ? "bg-white text-gray-700 font-semibold" : "text-gray-500 font-normal"
 							}`
 						}

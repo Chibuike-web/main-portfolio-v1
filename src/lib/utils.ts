@@ -51,15 +51,15 @@ export const projects: Projects[] = [
 	{
 		image: kulipal,
 		title: "Kulipal",
-		subtitle: "Mobile App Redesign",
+		subtitle: "Smart Ticketing",
 		year: 2025,
-		type: { value: "Case Study", link: "/kulipal-redesign" },
+		type: { value: "Case Study", link: "/smart-ticketing" },
 	},
 	{
 		image: medibridge,
 		title: "Medibridge",
 		subtitle: "AI-Powered EHR",
-		year: 2024,
+		year: 2025,
 		type: { value: "Case Study", link: "/medibridge" },
 	},
 	{
@@ -75,7 +75,7 @@ export const projects: Projects[] = [
 		subtitle: "Women Clothing Ecommerce Platform",
 		year: 2025,
 		type: [
-			{ value: "Live Site", link: "https://chibuike-web.github.io/Modimal/" },
+			{ value: "Live Site", link: "https://modimal-4keo.vercel.app/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/Modimal" },
 		],
 	},
@@ -85,7 +85,7 @@ export const projects: Projects[] = [
 		subtitle: "Travel Booking Platform",
 		year: 2025,
 		type: [
-			{ value: "Live Site", link: "https://chibuike-web.github.io/Golobe/" },
+			{ value: "Live Site", link: "https://golobe-otv2.vercel.app/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/Golobe" },
 		],
 	},
