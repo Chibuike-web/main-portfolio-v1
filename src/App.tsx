@@ -6,6 +6,7 @@ import About from "./pages/About";
 import ScrollToTop from "./ScrollToTop";
 import BulkAirtime from "./pages/BulkAirtime";
 import SmartTicketing from "./pages/SmartTicketing";
+import Medibridge from "./pages/Medibridge";
 
 export default function App() {
 	const location = useLocation();
@@ -20,6 +21,7 @@ export default function App() {
 				<Route path="/about" element={<About />} />
 				<Route path="/bulk-airtime" element={<BulkAirtime />} />
 				<Route path="/smart-ticketing" element={<SmartTicketing />} />
+				<Route path="/medibridge" element={<Medibridge />} />
 			</Routes>
 			{(pathname === "/" || pathname === "/about") && <Footer />}
 		</>

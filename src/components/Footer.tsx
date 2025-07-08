@@ -6,7 +6,7 @@ export default function Footer() {
 	const { copyStatus, copyEmail } = useCopyEmail();
 
 	return (
-		<footer className="py-10 text-gray-700 bg-gray-100">
+		<footer className="py-10 text-gray-700 bg-white">
 			<div className="mx-auto w-full max-w-[1296px] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
 				<div>
 					<p className="font-semibold text-gray-700 leading-[1.6] max-w-[259px]">

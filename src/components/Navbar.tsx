@@ -10,7 +10,7 @@ export default function Navbar() {
 
 const DesktopNav = () => {
 	return (
-		<nav className="border-b border-gray-300 py-[22px]">
+		<nav className="bg-white py-[22px]">
 			<header className="mx-auto w-full max-w-[1296px] grid grid-cols-3 place-items-center gap-6 px-6 xl:px-0">
 				<figure className="w-full">
 					<Logo className="w-auto" />
