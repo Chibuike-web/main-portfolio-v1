@@ -8,7 +8,7 @@ import fourthImage from "../assets/bulk-airtime/fourth.webp";
 import fifthImage from "../assets/bulk-airtime/fifth.webp";
 import sixthImage from "../assets/bulk-airtime/sixth.webp";
 import seventhImage from "../assets/bulk-airtime/seventh.webp";
-import eigthImage from "../assets/bulk-airtime/eigth.webp";
+import eighthImage from "../assets/bulk-airtime/eighth.webp";
 
 export default function BulkAirtime() {
 	return (
@@ -170,7 +170,7 @@ export default function BulkAirtime() {
 				className="mt-[52px] md:mt-[104px]"
 			/>
 			<img
-				src={eigthImage}
+				src={eighthImage}
 				alt="Image of four screens of the app design"
 				width={1296}
 				height={750}

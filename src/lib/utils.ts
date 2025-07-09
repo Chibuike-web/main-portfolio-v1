@@ -67,7 +67,7 @@ export const projects: Projects[] = [
 		title: "Zenly",
 		subtitle: "Burnout Leave",
 		year: 2024,
-		type: { value: "Case Study", link: "/zenly" },
+		type: { value: "Case Study", link: "/" },
 	},
 	{
 		image: modimal,

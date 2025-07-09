@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { CancelIcon, Logo, MenuIcon, RightArrowIcon } from "../assets/icons";
-import { useState } from "react";
-import { useMediaQuery } from "../Hooks";
+import { useEffect, useState } from "react";
+import { useMediaQuery, useRealTime } from "../Hooks";
 
 export default function Navbar() {
 	const isDesktop = useMediaQuery("(min-width: 800px)");
@@ -9,6 +9,7 @@ export default function Navbar() {
 }
 
 const DesktopNav = () => {
+	const time = useRealTime();
 	return (
 		<nav className="bg-white py-[22px]">
 			<header className="mx-auto w-full max-w-[1296px] grid grid-cols-3 place-items-center gap-6 px-6 xl:px-0">
@@ -47,7 +48,7 @@ const DesktopNav = () => {
 				</div>
 				<div className="flex items-center justify-end gap-4 font-semibold w-full">
 					<span>Enugu, Nigeria</span>
-					<span>07:30PM</span>
+					<span>{time}</span>
 				</div>
 			</header>
 		</nav>
@@ -56,8 +57,20 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
 	const [isOpen, setIsOpen] = useState(false);
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [isOpen]);
+
 	return (
-		<nav className="border-b border-gray-300 py-4">
+		<nav className="bg-white py-4">
 			<header className="mx-auto w-full max-w-[1296px] flex items-center justify-between px-6 xl:px-0">
 				<Logo className="w-[2rem] h-[2rem]" />
 
@@ -71,6 +84,7 @@ const MobileNav = () => {
 };
 
 const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
+	const time = useRealTime();
 	return (
 		<div className="bg-white flex flex-col text-gray-700 inset-0 fixed top-[65.77px] px-6 z-50">
 			<div className="flex flex-col gap-12 font-medium py-10 w-full">
@@ -116,7 +130,7 @@ const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
 			</div>
 			<div className="flex items-center w-full justify-between font-semibold mt-auto h-16 pb-6">
 				<span>Enugu, Nigeria</span>
-				<span>07:30PM</span>
+				<span>{time}</span>
 			</div>
 		</div>
 	);
