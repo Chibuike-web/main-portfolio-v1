@@ -14,6 +14,7 @@ import tenthImage from "../assets/medibridge/tenth.webp";
 import eleventhImage from "../assets/medibridge/eleventh.webp";
 import twelfthImage from "../assets/medibridge/twelfth.webp";
 import thirteenthImage from "../assets/medibridge/thirteenth.webp";
+import { LazyImage } from "../Hooks";
 
 export default function Medibridge() {
 	return (
@@ -38,7 +39,12 @@ export default function Medibridge() {
 				/>
 			</figure>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img src={firstImage} alt="Image showing onboarding screen" width={1296} height={750} />
+				<LazyImage
+					src={firstImage}
+					alt="Image showing onboarding screen"
+					width={1296}
+					height={750}
+				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					I kept the entry screen simple and focused. When hospitals land here, they’re greeted with
 					just two clear options: Begin Registration or Log In. It’s explicit and clear what action
@@ -46,21 +52,21 @@ export default function Medibridge() {
 				</p>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img src={secondImage} alt="Image showing signup screen" width={1296} height={750} />
+				<LazyImage src={secondImage} alt="Image showing signup screen" width={1296} height={750} />
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					The sign-up screen is designed to clearly request the key information needed from the
 					hospital, while also providing a way to validate the hospital and user entering the
 					platform.
 				</p>
 			</section>
-			<img
+			<LazyImage
 				src={thirdImage}
 				alt="Image showing two screens side by side — the left screen displays the institution document upload, while the right screen shows the administrator sign-up form."
 				width={1296}
 				height={750}
 				className="mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={fourthImage}
 				alt="Image showing an empty dashboard screen, ready to display hospital data once records are added."
 				width={1296}
@@ -80,7 +86,7 @@ export default function Medibridge() {
 						review or transfer.
 					</p>
 				</div>
-				<img
+				<LazyImage
 					src={fifthImage}
 					alt="Image showing two screens side by side — the left screen displays the “Choose or drag to upload patient’s record” modal, and the right screen shows the final uploaded state."
 					width={1296}
@@ -88,7 +94,7 @@ export default function Medibridge() {
 				/>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img
+				<LazyImage
 					src={sixthImage}
 					alt="Image showing two screens side by side — the left screen displays the completed data extraction state, while the right screen shows the extracted content."
 					width={1296}
@@ -100,21 +106,21 @@ export default function Medibridge() {
 					simple — just the key info pulled from the document, ready for review
 				</p>
 			</section>
-			<img
+			<LazyImage
 				src={seventhImage}
 				alt="Image showing a filled dashboard screen with the Dashboard menu active, displaying key hospital metrics and activity."
 				width={1296}
 				height={750}
 				className="mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={eighthImage}
 				alt="Image showing a filled dashboard screen with the Patient Records menu active, displaying existing patient records."
 				width={1296}
 				height={750}
 				className="mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={ninthImage}
 				alt="Image showing a filled dashboard screen with the Transfers menu active, displaying existing transfer records."
 				width={1296}
@@ -132,28 +138,28 @@ export default function Medibridge() {
 						submit. But nothing moves until the patient approves
 					</p>
 				</div>
-				<img
+				<LazyImage
 					src={tenthImage}
 					alt="Image showing two screens Image showing two modals side by side — the left modal displays the patient selection in an inactive state, while the right modal shows the active state with the dropdown expanded."
 					width={1296}
 					height={750}
 				/>
 			</section>
-			<img
+			<LazyImage
 				src={eleventhImage}
 				alt="Image showing two modals side by side — the left modal displays empty fields for the target hospital name and admin email, while the right modal shows the same fields filled out."
 				width={1296}
 				height={750}
 				className="mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={twelfthImage}
 				alt="Image showing two modals side by side — the left modal displays empty fields for clinical document, format, and extra note, while the right modal shows the same fields filled out."
 				width={1296}
 				height={750}
 				className="mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={thirteenthImage}
 				alt="Image showing two review modals side by side — the left modal displays the checkbox for confirmation unchecked, while the right modal shows the same checkbox checked."
 				width={1296}

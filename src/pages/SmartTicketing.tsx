@@ -14,6 +14,7 @@ import tenthImage from "../assets/smart-ticketing/tenth.webp";
 import eleventhImage from "../assets/smart-ticketing/eleventh.webp";
 import twelfthImage from "../assets/smart-ticketing/twelfth.webp";
 import thirteenthImage from "../assets/smart-ticketing/thirteenth.webp";
+import { LazyImage } from "../Hooks";
 
 export default function SmartTicketing() {
 	return (
@@ -87,7 +88,7 @@ export default function SmartTicketing() {
 				</div>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img
+				<LazyImage
 					src={firstImage}
 					alt="Image of three screens of the app design"
 					width={1296}
@@ -101,7 +102,7 @@ export default function SmartTicketing() {
 				</p>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img
+				<LazyImage
 					src={secondImage}
 					alt="Image of three screens of the app design"
 					width={1296}
@@ -114,7 +115,7 @@ export default function SmartTicketing() {
 				</p>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img
+				<LazyImage
 					src={thirdImage}
 					alt="Image of three screens of the app design"
 					width={1296}
@@ -126,7 +127,7 @@ export default function SmartTicketing() {
 				</p>
 			</section>
 			{[fourthImage, fifthImage, sixthImage, seventhImage, eighthImage].map((image, index) => (
-				<img
+				<LazyImage
 					key={index}
 					src={image}
 					alt="Image of two screens of the app design"
@@ -141,7 +142,7 @@ export default function SmartTicketing() {
 					shelved. Management decided to bring in external contractors to redesign and rebuild the
 					app from scratch. Below are some of my contributions to the entire mobile app redesign.
 				</p>
-				<img
+				<LazyImage
 					src={ninthImage}
 					alt="Image of three screens of the app design"
 					width={1296}
@@ -149,7 +150,7 @@ export default function SmartTicketing() {
 				/>
 			</section>
 			{[tenthImage, eleventhImage, twelfthImage, thirteenthImage].map((image, index) => (
-				<img
+				<LazyImage
 					key={index}
 					src={image}
 					alt="Image of two screens of the app design"

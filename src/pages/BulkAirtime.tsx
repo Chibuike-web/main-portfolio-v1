@@ -9,6 +9,7 @@ import fifthImage from "../assets/bulk-airtime/fifth.webp";
 import sixthImage from "../assets/bulk-airtime/sixth.webp";
 import seventhImage from "../assets/bulk-airtime/seventh.webp";
 import eighthImage from "../assets/bulk-airtime/eighth.webp";
+import { LazyImage } from "../Hooks";
 
 export default function BulkAirtime() {
 	return (
@@ -30,7 +31,7 @@ export default function BulkAirtime() {
 				Crafting a mobile airtime feature that saves time when it matters most
 			</h1>
 			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
-				<img src={heroImage} alt="" className="w-full h-full object-cover" />
+				<img src={heroImage} alt="" className="w-full h-full object-cover" loading="lazy" />
 			</figure>
 
 			<section className="flex flex-col md:flex-row gap-6">
@@ -86,7 +87,7 @@ export default function BulkAirtime() {
 				</div>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img
+				<LazyImage
 					src={firstImage}
 					alt="Image of three screens of the app design"
 					width={1296}
@@ -111,7 +112,7 @@ export default function BulkAirtime() {
 						they need and making the selection process feel smooth and effortless
 					</p>
 				</div>
-				<img
+				<LazyImage
 					src={secondImage}
 					alt="Image of two screens of the app design"
 					width={1296}
@@ -119,7 +120,7 @@ export default function BulkAirtime() {
 				/>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
-				<img
+				<LazyImage
 					src={thirdImage}
 					alt="Image of two screens of the app design"
 					width={1296}
@@ -130,7 +131,7 @@ export default function BulkAirtime() {
 					pulled away from the main action.
 				</p>
 			</section>
-			<img
+			<LazyImage
 				src={fourthImage}
 				alt="Image of two screens of the app design"
 				width={1296}
@@ -148,33 +149,34 @@ export default function BulkAirtime() {
 						nearby to keep things smooth and frustration-free
 					</p>
 				</div>
-				<img
+				<LazyImage
 					src={fifthImage}
 					alt="Image of three screens of the app design"
 					width={1296}
 					height={750}
+					className="w-full"
 				/>
 			</section>
-			<img
+			<LazyImage
 				src={sixthImage}
 				alt="Image of two screens of the app design"
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px]"
+				className="w-full mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={seventhImage}
 				alt="Image of three screens of the app design"
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px]"
+				className="w-full mt-[52px] md:mt-[104px]"
 			/>
-			<img
+			<LazyImage
 				src={eighthImage}
 				alt="Image of four screens of the app design"
 				width={1296}
 				height={750}
-				className="my-[52px] md:my-[104px]"
+				className="w-full my-[52px] md:my-[104px]"
 			/>
 		</main>
 	);
