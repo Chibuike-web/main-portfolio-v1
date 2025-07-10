@@ -31,7 +31,12 @@ export default function BulkAirtime() {
 				Crafting a mobile airtime feature that saves time when it matters most
 			</h1>
 			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
-				<img src={heroImage} alt="" className="w-full h-full object-cover" loading="lazy" />
+				<img
+					src={heroImage}
+					alt="A mockup of the Send Airtime screen displayed on an iPhone 16 Pro resting on a bubbly surface"
+					className="w-full h-full object-cover"
+					loading="lazy"
+				/>
 			</figure>
 
 			<section className="flex flex-col md:flex-row gap-6">
@@ -89,7 +94,7 @@ export default function BulkAirtime() {
 			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={firstImage}
-					alt="Image of three screens of the app design"
+					alt="Image showing three screens side by side: Home screen on the left, Choose Airtime screen in the center, and Send to Multiple People screen on the right"
 					width={1296}
 					height={750}
 				/>
@@ -114,7 +119,7 @@ export default function BulkAirtime() {
 				</div>
 				<LazyImage
 					src={secondImage}
-					alt="Image of two screens of the app design"
+					alt="Image showing two screens side by side - Select from contacts unselected and the same screen with selection"
 					width={1296}
 					height={750}
 				/>
@@ -122,7 +127,7 @@ export default function BulkAirtime() {
 			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={thirdImage}
-					alt="Image of two screens of the app design"
+					alt="Image showing two screens side by side - Send Airtime with the first contact selected and the same screen with the second contact selected"
 					width={1296}
 					height={750}
 				/>
@@ -133,7 +138,7 @@ export default function BulkAirtime() {
 			</section>
 			<LazyImage
 				src={fourthImage}
-				alt="Image of two screens of the app design"
+				alt="Two screens side by side: one showing the Summary screen, and the other showing the same screen with a payment bottom sheet visible"
 				width={1296}
 				height={750}
 				className="mt-[52px] md:mt-[104px]"
@@ -151,7 +156,7 @@ export default function BulkAirtime() {
 				</div>
 				<LazyImage
 					src={fifthImage}
-					alt="Image of three screens of the app design"
+					alt="Three screens side by side: the left shows manual number input, the center shows a help tip bottom sheet, and the right shows an error state for the input field"
 					width={1296}
 					height={750}
 					className="w-full"
@@ -159,21 +164,21 @@ export default function BulkAirtime() {
 			</section>
 			<LazyImage
 				src={sixthImage}
-				alt="Image of two screens of the app design"
+				alt="Image showing two screens side by side - Send Airtime with the first recipient number selected and the same screen with the second recipient number selected"
 				width={1296}
 				height={750}
 				className="w-full mt-[52px] md:mt-[104px]"
 			/>
 			<LazyImage
 				src={seventhImage}
-				alt="Image of three screens of the app design"
+				alt="Three screens side by side: the left shows the Summary screen, the center shows the Summary screen with the Remove Recipient modal open, and the right shows the success modal after removal"
 				width={1296}
 				height={750}
 				className="w-full mt-[52px] md:mt-[104px]"
 			/>
 			<LazyImage
 				src={eighthImage}
-				alt="Image of four screens of the app design"
+				alt="Four images side by side: the first shows a transaction summary for all successful airtime purchases; the second shows detailed information for a specific internet service provider purchase, including recipient, transaction type, number, data, and payment method; the third shows a transaction summary with one failed purchase among three successful ones; and the fourth shows detailed information for the failed transaction, including all related details"
 				width={1296}
 				height={750}
 				className="w-full my-[52px] md:my-[104px]"

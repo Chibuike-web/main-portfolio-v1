@@ -32,7 +32,11 @@ export default function SmartTicketing() {
 				Redefining how users browse, select, and buy tickets across multiple event days{" "}
 			</h1>
 			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
-				<img src={heroImage} alt="" className="w-full h-full object-cover" />
+				<img
+					src={heroImage}
+					alt="Two stacked iPhone 16 Pro devices resting on a rocky surface, showing the Event Details and Select Ticket screens"
+					className="w-full h-full object-cover"
+				/>
 			</figure>
 			<section className="flex flex-col md:flex-row gap-6">
 				<div className="row-span-3 font-secondary w-full max-w-[416px] text-gray-700 text-[20px] md:text-[24px] font-bold font-secondarys">
@@ -90,7 +94,7 @@ export default function SmartTicketing() {
 			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={firstImage}
-					alt="Image of three screens of the app design"
+					alt="Image showing three elements: the left shows a paid event card, the center displays a vertical stack of events, and the right shows a free event card"
 					width={1296}
 					height={750}
 				/>
@@ -104,7 +108,7 @@ export default function SmartTicketing() {
 			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={secondImage}
-					alt="Image of three screens of the app design"
+					alt="Two design screens side by side: the first shows event details for a multi-day event, and the second shows event details for a single-day event"
 					width={1296}
 					height={750}
 				/>
@@ -117,7 +121,7 @@ export default function SmartTicketing() {
 			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={thirdImage}
-					alt="Image of three screens of the app design"
+					alt="Image showing two screens: the first displays the Select Event Day screen with unselected options, and the second shows the same screen with selected options"
 					width={1296}
 					height={750}
 				/>
@@ -126,11 +130,11 @@ export default function SmartTicketing() {
 					options and immediate visual feedback.
 				</p>
 			</section>
-			{[fourthImage, fifthImage, sixthImage, seventhImage, eighthImage].map((image, index) => (
+			{listOfImages1.map((image, index) => (
 				<LazyImage
 					key={index}
-					src={image}
-					alt="Image of two screens of the app design"
+					src={image.src}
+					alt={image.alt}
 					width={1296}
 					height={750}
 					className="mt-[52px] md:mt-[104px]"
@@ -144,16 +148,16 @@ export default function SmartTicketing() {
 				</p>
 				<LazyImage
 					src={ninthImage}
-					alt="Image of three screens of the app design"
+					alt="Three app screens: the first shows the Wallet screen, the middle shows the Add Funds screen with input fields, and the third shows the Wallet screen with a toast notification"
 					width={1296}
 					height={750}
 				/>
 			</section>
-			{[tenthImage, eleventhImage, twelfthImage, thirteenthImage].map((image, index) => (
+			{listOfImages2.map((image, index) => (
 				<LazyImage
 					key={index}
-					src={image}
-					alt="Image of two screens of the app design"
+					src={image.src}
+					alt={image.alt}
 					width={1296}
 					height={750}
 					className={`mt-[52px] md:mt-[104px] ${index === 3 && "mb-[52px] md:mb-[104px]"}`}
@@ -162,3 +166,45 @@ export default function SmartTicketing() {
 		</main>
 	);
 }
+
+const listOfImages1 = [
+	{
+		alt: "Image showing two screens: the first shows the Select Ticket screen for a multi-day event, and the second shows the same screen for a single-day event",
+		src: fourthImage,
+	},
+	{
+		alt: "Image showing two screens: the first shows the Ticket Summary screen for a multi-day event, and the second shows the same screen for a single-day event",
+		src: fifthImage,
+	},
+	{
+		alt: "Image showing two screens: the first shows the promo section on the Ticket Summary screen for a multi-day event, and the second shows the promo section for a single-day event",
+		src: sixthImage,
+	},
+	{
+		alt: "Image showing two screens: the first shows the promo code section, and the second shows the bottom sheet for entering a promo code",
+		src: seventhImage,
+	},
+	{
+		alt: "Image showing two screens: the first shows the Payment Details screen with two payment options, and the second shows a success modal confirming successful payment",
+		src: eighthImage,
+	},
+];
+
+const listOfImages2 = [
+	{
+		alt: "Image showing three screens: the first shows the success screen for funds added and the center one shows fialed trasaction scrren and the last of sows transactiondetals",
+		src: tenthImage,
+	},
+	{
+		alt: "Image showing three screens: the first shows the success screen for funds added, the center shows the failed transaction screen, and the last shows the transaction details screen",
+		src: eleventhImage,
+	},
+	{
+		alt: "Image showing three screens: the first shows the Update Wallet PIN screen, the center shows an error state for the PIN input, and the last shows a modal confirming successful update",
+		src: twelfthImage,
+	},
+	{
+		alt: "Image showing three screens: the first shows the Send Funds screen with beneficiaries, the center shows the full list of beneficiaries, and the third shows a selected list of beneficiaries",
+		src: thirteenthImage,
+	},
+];

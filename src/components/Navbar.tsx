@@ -2,6 +2,7 @@ import { NavLink } from "react-router";
 import { CancelIcon, Logo, MenuIcon, RightArrowIcon } from "../assets/icons";
 import { useEffect, useState } from "react";
 import { useMediaQuery, useRealTime } from "../Hooks";
+import Button from "./Button";
 
 export default function Navbar() {
 	const isDesktop = useMediaQuery("(min-width: 800px)");
@@ -72,7 +73,9 @@ const MobileNav = () => {
 	return (
 		<nav className="bg-white py-4">
 			<header className="mx-auto w-full max-w-[1296px] flex items-center justify-between px-6 xl:px-0">
-				<Logo className="w-[2rem] h-[2rem]" />
+				<Button as="link" to="/">
+					<Logo className="w-[2rem] h-[2rem]" />
+				</Button>
 
 				<button type="button" onClick={() => setIsOpen((prev) => !prev)}>
 					{isOpen ? <CancelIcon /> : <MenuIcon />}
@@ -99,7 +102,7 @@ const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
 				>
 					<span>Work</span>
 					<span>
-						<RightArrowIcon />
+						<RightArrowIcon className="w-6 h-6" />
 					</span>
 				</NavLink>
 				<NavLink
@@ -113,7 +116,7 @@ const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
 				>
 					<span>About</span>
 					<span>
-						<RightArrowIcon />
+						<RightArrowIcon className="w-6 h-6" />
 					</span>
 				</NavLink>
 				<a
@@ -124,7 +127,7 @@ const MobileLink = ({ setIsOpen }: { setIsOpen: (item: boolean) => void }) => {
 				>
 					<span>Resume</span>
 					<span>
-						<RightArrowIcon />
+						<RightArrowIcon className="w-6 h-6" />
 					</span>
 				</a>
 			</div>

@@ -27,4 +27,5 @@ body {
 	font-family: var(--primary);
 	line-height: 1.2;
 	min-width: 0;
+	color: var(--gray-700);
 }

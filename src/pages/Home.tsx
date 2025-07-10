@@ -21,8 +21,8 @@ export default function Home() {
 						<span className="font-semibold text-gray-700">designer and developer</span>. I blend{" "}
 						<span className="font-semibold text-gray-700">design and code</span> to build{" "}
 						<span className="font-semibold text-gray-700">beautiful,</span>{" "}
-						<span>human-centered software</span>
-						that <span className="font-semibold text-gray-700">looks good</span> and{" "}
+						<span>human-centered software</span> that{" "}
+						<span className="font-semibold text-gray-700">looks good</span> and{" "}
 						<span className="font-semibold text-gray-700">feels great</span> to use.
 					</p>
 					<div className="flex items-center gap-6">
@@ -91,7 +91,7 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 						rel="noopener noreferrer"
 					>
 						{type[0].value}
-						<RightArrowIcon fill="white" />
+						<RightArrowIcon className="white" />
 					</Button>
 					<Button
 						variant="outline"
@@ -109,7 +109,7 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 			) : type.value === "Case Study" ? (
 				<Button as="link" to={type.link} variant="primary" size="md" fullWidth>
 					{type.value}
-					<RightArrowIcon fill="white" />
+					<RightArrowIcon className="white" />
 				</Button>
 			) : (
 				<Button
@@ -123,7 +123,7 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 					className={notReady ? "flex justify-center" : ""}
 				>
 					{type.value}
-					{!notReady && <RightArrowIcon fill="white" />}
+					{!notReady && <RightArrowIcon className="white" />}
 				</Button>
 			)}
 		</>
