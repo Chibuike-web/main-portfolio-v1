@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { handleCopy } from "./lib/utils";
-import Lenis from "lenis";
 
 export const useMediaQuery = (query: string) => {
 	const [matches, setMatches] = useState(false);
