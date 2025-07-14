@@ -7,13 +7,29 @@ import ScrollToTop from "./ScrollToTop";
 import BulkAirtime from "./pages/BulkAirtime";
 import SmartTicketing from "./pages/SmartTicketing";
 import Medibridge from "./pages/Medibridge";
+import { ReactLenis, type LenisRef } from "lenis/react";
+import { useEffect, useRef } from "react";
+import { cancelFrame, frame } from "motion/react";
 
 export default function App() {
 	const location = useLocation();
 	const pathname = location.pathname;
+	const lenisRef = useRef<LenisRef>(null);
+
+	useEffect(() => {
+		function update(data: { timestamp: number }) {
+			const time = data.timestamp;
+			lenisRef.current?.lenis?.raf(time);
+		}
+
+		frame.update(update, true);
+
+		return () => cancelFrame(update);
+	}, []);
 
 	return (
 		<>
+			<ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
 			<ScrollToTop />
 			{(pathname === "/" || pathname === "/about") && <Navbar />}
 			<Routes>

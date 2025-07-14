@@ -135,8 +135,7 @@ export const projects: Projects[] = [
 		title: "Euphoria",
 		subtitle: "Ecommerce (Apparels) Website",
 		year: 2025,
-		type: { value: "Work in Progress", link: "" },
-		notReady: true,
+		type: { value: "Github", link: "https://github.com/Chibuike-web/euphoria" },
 	},
 	{
 		image: clicon,
