@@ -4,7 +4,7 @@ import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
 import type { ProjectType } from "../lib/utils";
-import { motion, type MotionProps } from "motion/react";
+import { motion } from "motion/react";
 
 const MotionButton = motion(Button);
 export default function Home() {
