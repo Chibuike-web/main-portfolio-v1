@@ -1,9 +1,9 @@
 import { Link } from "react-router";
 import type { LinkProps } from "react-router";
-
 import { cva } from "class-variance-authority";
 import { cn } from "../lib/utils";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { motion, type MotionProps } from "motion/react";
 
 type BaseProps = {
 	className?: string;
@@ -54,3 +54,10 @@ const buttonVariants = cva("flex items-center justify-between font-semibold curs
 		},
 	},
 });
+
+const MotionButton = motion(Button);
+type MotionButtonProps = ButtonProps & MotionProps;
+
+export const CustomMotion = (props: MotionButtonProps) => {
+	return <MotionButton {...props} />;
+};

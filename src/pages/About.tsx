@@ -83,7 +83,7 @@ export default function About() {
 			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-6 my-[52px] lg:my-[104px]">
 				<p className="font-secondary font-medium tracking-[0.08em] text-gray-500">EDUCATION</p>
 				<div className="col-span-2 flex flex-col gap-10">
-					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4">
+					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4 ">
 						<p className="text-gray-700 font-bold leading-[1.6] tracking-[0.08em] font-secondary">
 							UNIVERSITY OF NIGERIA NSUKKA
 						</p>
@@ -92,7 +92,7 @@ export default function About() {
 							<span className="text-gray-500 font-semibold">Civil Engineering</span>
 						</p>
 					</div>
-					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4">
+					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4 items-center">
 						<p className="text-gray-700 font-bold leading-[1.6] tracking-[0.08em] font-secondary">
 							UI/UX DESIGN COURSE
 						</p>

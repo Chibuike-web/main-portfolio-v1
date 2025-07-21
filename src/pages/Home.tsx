@@ -1,10 +1,12 @@
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
-import Button from "../components/Button";
+import Button, { CustomMotion } from "../components/Button";
 import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
 import type { ProjectType } from "../lib/utils";
+import { motion, type MotionProps } from "motion/react";
 
+const MotionButton = motion(Button);
 export default function Home() {
 	const { copyStatus, copyEmail } = useCopyEmail();
 
@@ -26,21 +28,31 @@ export default function Home() {
 						<span className="font-semibold text-gray-700">feels great</span> to use.
 					</p>
 					<div className="flex items-center gap-6">
-						<Button
+						<MotionButton
 							size="sm"
 							variant="primary"
 							className="flex gap-[6px] items-center relative"
 							onClick={copyEmail}
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
 						>
 							Copy email <CopyIcon />{" "}
 							{copyStatus && (
-								<span className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700">
+								<motion.span
+									initial={{ opacity: 0, y: -5 }}
+									animate={{ opacity: 1, y: 0 }}
+									exit={{ opacity: 0, y: -5 }}
+									transition={{ duration: 0.2 }}
+									className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700"
+								>
 									{copyStatus}
-								</span>
+								</motion.span>
 							)}
-						</Button>
+						</MotionButton>
 
-						<Button
+						<CustomMotion
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
 							size="sm"
 							variant="primary"
 							as="a"
@@ -50,7 +62,7 @@ export default function Home() {
 							className="flex gap-[6px] items-center bg-gray-100 text-gray-700"
 						>
 							Linkedin <LinkedinLogo />
-						</Button>
+						</CustomMotion>
 					</div>
 				</div>
 			</section>
