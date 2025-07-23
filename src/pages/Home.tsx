@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
-import Button, { CustomMotion } from "../components/Button";
+import { CustomMotion } from "../components/Button";
 import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
@@ -90,6 +90,7 @@ export default function Home() {
 
 const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notReady?: boolean }) => {
 	const [hovered, setHovered] = useState(false);
+	const [hoveredId, setHoveredId] = useState("");
 	return (
 		<>
 			{Array.isArray(type) ? (
@@ -102,8 +103,8 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 						href={type[0].link}
 						target="_blank"
 						rel="noopener noreferrer"
-						onMouseEnter={() => setHovered(true)}
-						onMouseLeave={() => setHovered(false)}
+						onMouseEnter={() => setHoveredId("primary")}
+						onMouseLeave={() => setHoveredId("")}
 						whileTap={{ scale: 0.95 }}
 					>
 						{type[0].value}
@@ -111,15 +112,14 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 							<motion.div
 								key="arrow"
 								initial={{ x: 0 }}
-								animate={{ x: hovered ? -10 : 0 }}
+								animate={{ x: hoveredId === "primary" ? -10 : 0 }}
 								transition={{ type: "spring", stiffness: 300, damping: 20 }}
-								className="ml-2 inline-block"
 							>
 								<RightArrowIcon className="white" />
 							</motion.div>
 						</AnimatePresence>
 					</CustomMotion>
-					<Button
+					<CustomMotion
 						variant="outline"
 						size="md"
 						fullWidth
@@ -127,10 +127,22 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 						href={type[1].link}
 						target="_blank"
 						rel="noopener noreferrer"
+						onMouseEnter={() => setHoveredId("secondary")}
+						onMouseLeave={() => setHoveredId("")}
+						whileTap={{ scale: 0.95 }}
 					>
 						{type[1].value}
-						<RightArrowIcon />
-					</Button>
+						<AnimatePresence>
+							<motion.div
+								key="arrow"
+								initial={{ x: 0 }}
+								animate={{ x: hoveredId === "secondary" ? -10 : 0 }}
+								transition={{ type: "spring", stiffness: 300, damping: 20 }}
+							>
+								<RightArrowIcon />
+							</motion.div>
+						</AnimatePresence>
+					</CustomMotion>
 				</div>
 			) : type.value === "Case Study" ? (
 				<CustomMotion
@@ -152,7 +164,6 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 							initial={{ x: 0 }}
 							animate={{ x: hovered ? -10 : 0 }}
 							transition={{ type: "spring", stiffness: 300, damping: 20 }}
-							className="ml-2 inline-block"
 						>
 							<RightArrowIcon className="white" />
 						</motion.div>
@@ -180,7 +191,6 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 								initial={{ x: 0 }}
 								animate={{ x: hovered ? -10 : 0 }}
 								transition={{ type: "spring", stiffness: 300, damping: 20 }}
-								className="ml-2 inline-block"
 							>
 								<RightArrowIcon className="white" />
 							</motion.div>
