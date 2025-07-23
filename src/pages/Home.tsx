@@ -1,12 +1,12 @@
+import { useState } from "react";
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
 import Button, { CustomMotion } from "../components/Button";
 import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
 import type { ProjectType } from "../lib/utils";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 
-const MotionButton = motion(Button);
 export default function Home() {
 	const { copyStatus, copyEmail } = useCopyEmail();
 
@@ -28,7 +28,7 @@ export default function Home() {
 						<span className="font-semibold text-gray-700">feels great</span> to use.
 					</p>
 					<div className="flex items-center gap-6">
-						<MotionButton
+						<CustomMotion
 							size="sm"
 							variant="primary"
 							className="flex gap-[6px] items-center relative"
@@ -48,7 +48,7 @@ export default function Home() {
 									{copyStatus}
 								</motion.span>
 							)}
-						</MotionButton>
+						</CustomMotion>
 
 						<CustomMotion
 							whileHover={{ scale: 1.05 }}
@@ -89,11 +89,12 @@ export default function Home() {
 }
 
 const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notReady?: boolean }) => {
+	const [hovered, setHovered] = useState(false);
 	return (
 		<>
 			{Array.isArray(type) ? (
 				<div className="flex gap-[10px]">
-					<Button
+					<CustomMotion
 						variant="primary"
 						size="md"
 						fullWidth
@@ -101,10 +102,23 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 						href={type[0].link}
 						target="_blank"
 						rel="noopener noreferrer"
+						onMouseEnter={() => setHovered(true)}
+						onMouseLeave={() => setHovered(false)}
+						whileTap={{ scale: 0.95 }}
 					>
 						{type[0].value}
-						<RightArrowIcon className="white" />
-					</Button>
+						<AnimatePresence>
+							<motion.div
+								key="arrow"
+								initial={{ x: 0 }}
+								animate={{ x: hovered ? -10 : 0 }}
+								transition={{ type: "spring", stiffness: 300, damping: 20 }}
+								className="ml-2 inline-block"
+							>
+								<RightArrowIcon className="white" />
+							</motion.div>
+						</AnimatePresence>
+					</CustomMotion>
 					<Button
 						variant="outline"
 						size="md"
@@ -119,12 +133,33 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 					</Button>
 				</div>
 			) : type.value === "Case Study" ? (
-				<Button as="link" to={type.link} variant="primary" size="md" fullWidth>
+				<CustomMotion
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+					whileTap={{ scale: 0.95 }}
+					as="link"
+					to={type.link}
+					variant="primary"
+					size="md"
+					fullWidth
+					className="flex items-center"
+				>
 					{type.value}
-					<RightArrowIcon className="white" />
-				</Button>
+
+					<AnimatePresence>
+						<motion.div
+							key="arrow"
+							initial={{ x: 0 }}
+							animate={{ x: hovered ? -10 : 0 }}
+							transition={{ type: "spring", stiffness: 300, damping: 20 }}
+							className="ml-2 inline-block"
+						>
+							<RightArrowIcon className="white" />
+						</motion.div>
+					</AnimatePresence>
+				</CustomMotion>
 			) : (
-				<Button
+				<CustomMotion
 					as="a"
 					href={type.link}
 					variant="primary"
@@ -132,11 +167,26 @@ const Buttons = ({ type, notReady }: { type: ProjectType | ProjectType[]; notRea
 					fullWidth
 					target="_blank"
 					rel="noopener noreferrer"
-					className={notReady ? "flex justify-center" : ""}
+					className={notReady ? "flex justify-center pointer-events-none" : ""}
+					onMouseEnter={() => setHovered(true)}
+					onMouseLeave={() => setHovered(false)}
+					whileTap={{ scale: 0.95 }}
 				>
 					{type.value}
-					{!notReady && <RightArrowIcon className="white" />}
-				</Button>
+					{!notReady && (
+						<AnimatePresence>
+							<motion.div
+								key="arrow"
+								initial={{ x: 0 }}
+								animate={{ x: hovered ? -10 : 0 }}
+								transition={{ type: "spring", stiffness: 300, damping: 20 }}
+								className="ml-2 inline-block"
+							>
+								<RightArrowIcon className="white" />
+							</motion.div>
+						</AnimatePresence>
+					)}
+				</CustomMotion>
 			)}
 		</>
 	);
