@@ -38,6 +38,64 @@ export default function Medibridge() {
 					className="w-full h-full object-cover"
 				/>
 			</figure>
+			<section className="flex flex-col md:flex-row gap-6">
+				<div className="row-span-3 font-secondary w-full max-w-[416px] text-gray-700 text-[20px] md:text-[24px] font-bold font-secondarys">
+					MEDIBRIDGE
+				</div>
+				<div className="grid grid-cols-1 sm:grid-cols-2 max-w-[856px] gap-6">
+					<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+						MediBridge started as a hackathon project to solve a key challenge in healthcare: the
+						inability to easily extract and transfer medical records from physical formats. Using
+						AI, the platform helps hospitals and clinics convert scanned documents into structured
+					</p>
+					<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+						data and securely transfer records at the patient's request. In the second iteration, I
+						redesigned the interface and system to better support clinical workflows and data
+						integrity.
+					</p>
+					<div className="w-full flex flex-col gap-[4px]">
+						<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+							PROBLEM STATEMENT
+						</h3>
+						<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+							Medical records are still often stored in paper-based or unstructured digital formats
+							like scanned PDFs or images. This creates friction for hospitals and clinics trying to
+							access accurate patient history, especially during inter-facility transfers. There’s
+							also no streamlined way to digitize, structure, and securely share these records on
+							patient request.
+						</p>
+					</div>
+					<div className="w-full flex flex-col gap-[4px]">
+						<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+							SOLUTION OVERVIEW
+						</h3>
+						<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+							I designed an AI-powered platform that extracts structured medical data from physical
+							documents, enabling hospitals and clinics to convert and transfer patient records
+							efficiently. The redesigned experience supports record review, patient-initiated
+							transfer requests, and secure sharing between institutions.
+						</p>
+					</div>
+					<div className="flex gap-4 items-start w-full">
+						<div className="w-full flex flex-col gap-[4px]">
+							<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+								ROLE
+							</h3>
+							<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+								Product Designer
+							</p>
+						</div>
+						<div className="w-full flex flex-col gap-[4px]">
+							<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+								DURATION
+							</h3>
+							<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+								1 month
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={firstImage}
