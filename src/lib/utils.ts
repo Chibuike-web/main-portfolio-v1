@@ -10,7 +10,6 @@ import modimal from "../assets/home/Modimal.svg";
 import golobe from "../assets/home/Golobe.svg";
 import sideProject from "../assets/home/Side-Project.svg";
 import euphoria from "../assets/home/Euphoria.svg";
-import clicon from "../assets/home/Clicon.svg";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -136,15 +135,6 @@ export const projects: Projects[] = [
 		subtitle: "Ecommerce (Apparels) Website",
 		year: 2025,
 		type: { value: "Github", link: "https://github.com/Chibuike-web/euphoria" },
-	},
-	{
-		image: clicon,
-		title: "Clicon",
-
-		subtitle: "Ecommerce Marketplace Website",
-		year: 2025,
-		type: { value: "Work in Progress", link: "" },
-		notReady: true,
 	},
 ].map((item) => ({
 	id: uuidv4(),

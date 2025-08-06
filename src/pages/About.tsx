@@ -4,7 +4,13 @@ export default function About() {
 	return (
 		<main className="mx-auto w-full max-w-[1296px] flex flex-col justify-between px-6 xl:px-0">
 			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6 mt-[52px] lg:mt-[104px]">
-				<img src={image} alt="A portrait of Chibuike" className="w-full" width={416} height={419} />
+				<img
+					src={image}
+					alt="A portrait of Chibuike"
+					className="w-full rounded-[16px] md:rounded-[20px]"
+					width={416}
+					height={419}
+				/>
 				<div className="col-span-2 flex flex-col gap-4">
 					<h1 className="text-[2rem] md:text-[4rem] font-semibold text-gray-700">
 						Hi, I'm Chibuike Maduabuchi

@@ -35,7 +35,7 @@ export default function SmartTicketing() {
 				<img
 					src={heroImage}
 					alt="Two stacked iPhone 16 Pro devices resting on a rocky surface, showing the Event Details and Select Ticket screens"
-					className="w-full h-full object-cover"
+					className="w-full h-full object-cover rounded-[2rem]"
 				/>
 			</figure>
 			<section className="flex flex-col md:flex-row gap-6">
@@ -97,6 +97,7 @@ export default function SmartTicketing() {
 					alt="Image showing three elements: the left shows a paid event card, the center displays a vertical stack of events, and the right shows a free event card"
 					width={1296}
 					height={750}
+					className="rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					For the entry screen, I drew inspiration from Airbnb’s card layout and applied a
@@ -111,6 +112,7 @@ export default function SmartTicketing() {
 					alt="Two design screens side by side: the first shows event details for a multi-day event, and the second shows event details for a single-day event"
 					width={1296}
 					height={750}
+					className="rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					Key event details are shown clearly, whether it's a one-day show or a multi-day
@@ -124,6 +126,7 @@ export default function SmartTicketing() {
 					alt="Image showing two screens: the first displays the Select Event Day screen with unselected options, and the second shows the same screen with selected options"
 					width={1296}
 					height={750}
+					className="rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					I designed a low-friction selection flow that encourages quick decisions through clear
@@ -137,10 +140,10 @@ export default function SmartTicketing() {
 					alt={image.alt}
 					width={1296}
 					height={750}
-					className="mt-[52px] md:mt-[104px]"
+					className="mt-[52px] md:mt-[104px] rounded-[2rem]"
 				/>
 			))}
-			<section className="mt-[52px] md:mt-[104px]">
+			<section className="mt-[52px] md:mt-[104px] rounded-[2rem]">
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mb-6 md:mb-12">
 					Unfortunately, the entire team was let go, and as a result, much of my work was ultimately
 					shelved. Management decided to bring in external contractors to redesign and rebuild the
@@ -151,6 +154,7 @@ export default function SmartTicketing() {
 					alt="Three app screens: the first shows the Wallet screen, the middle shows the Add Funds screen with input fields, and the third shows the Wallet screen with a toast notification"
 					width={1296}
 					height={750}
+					className="rounded-[2rem]"
 				/>
 			</section>
 			{listOfImages2.map((image, index) => (
@@ -160,7 +164,9 @@ export default function SmartTicketing() {
 					alt={image.alt}
 					width={1296}
 					height={750}
-					className={`mt-[52px] md:mt-[104px] ${index === 3 && "mb-[52px] md:mb-[104px]"}`}
+					className={`mt-[52px] md:mt-[104px] rounded-[2rem] ${
+						index === 3 && "mb-[52px] md:mb-[104px]"
+					}`}
 				/>
 			))}
 		</main>

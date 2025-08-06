@@ -7,7 +7,7 @@ import { motion, type MotionProps } from "motion/react";
 
 type BaseProps = {
 	className?: string;
-	variant?: "primary" | "outline";
+	variant?: "primary" | "secondary";
 	size?: "sm" | "md" | "lg";
 	fullWidth?: boolean;
 };
@@ -31,29 +31,32 @@ export default function Button({ className, variant, size, fullWidth, as, ...pro
 	return <button className={classes} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)} />;
 }
 
-const buttonVariants = cva("flex items-center justify-between font-semibold cursor-pointer", {
-	variants: {
-		variant: {
-			primary: "bg-gray-700 text-white",
-			outline: "border border-gray-500 text-gray-500",
+const buttonVariants = cva(
+	"flex items-center justify-between font-semibold cursor-pointer rounded-full pl-[16px] pr-[14px]",
+	{
+		variants: {
+			variant: {
+				primary: "bg-gray-700 text-white",
+				secondary: "bg-gray-100 text-gray-700",
+			},
+			size: {
+				sm: "h-[36px]  text-sm",
+				md: "h-[40px]  text-sm",
+				lg: "h-[48px]  text-base",
+			},
+			fullWidth: {
+				true: "w-full",
+				false: "w-auto",
+			},
+			defaultVariants: {
+				variant: "primary",
+				size: "md",
+				fullWidth: true,
+				as: "button",
+			},
 		},
-		size: {
-			sm: "h-[36px] pl-[12px] pr-[10px] text-sm",
-			md: "h-[40px] pl-[12px] pr-[10px] text-sm",
-			lg: "h-[48px] pl-[12px] pr-[10px] text-base",
-		},
-		fullWidth: {
-			true: "w-full",
-			false: "w-auto",
-		},
-		defaultVariants: {
-			variant: "primary",
-			size: "md",
-			fullWidth: true,
-			as: "button",
-		},
-	},
-});
+	}
+);
 
 const MotionButton = motion(Button);
 type MotionButtonProps = ButtonProps & MotionProps;

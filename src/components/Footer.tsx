@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import { BackArrowIcon } from "../assets/icons";
 import { useCopyEmail } from "../Hooks";
+import { motion } from "motion/react";
 
 export default function Footer() {
 	const { copyStatus, copyEmail } = useCopyEmail();
@@ -72,9 +73,15 @@ export default function Footer() {
 							chibuikemaduabuchi2023@gmail.com
 						</button>
 						{copyStatus && (
-							<span className="left-0 bottom-[-10px] translate-y-1/1 absolute text-gray-700">
+							<motion.span
+								initial={{ opacity: 0, y: -5 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: -5 }}
+								transition={{ duration: 0.2 }}
+								className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700"
+							>
 								{copyStatus}
-							</span>
+							</motion.span>
 						)}
 					</div>
 					<button

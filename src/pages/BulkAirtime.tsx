@@ -34,7 +34,7 @@ export default function BulkAirtime() {
 				<img
 					src={heroImage}
 					alt="A mockup of the Send Airtime screen displayed on an iPhone 16 Pro resting on a bubbly surface"
-					className="w-full h-full object-cover"
+					className="w-full h-full object-cover rounded-[2rem]"
 					loading="lazy"
 				/>
 			</figure>
@@ -95,6 +95,7 @@ export default function BulkAirtime() {
 				<LazyImage
 					src={firstImage}
 					alt="Image showing three screens side by side: Home screen on the left, Choose Airtime screen in the center, and Send to Multiple People screen on the right"
+					className="rounded-[2rem]"
 					width={1296}
 					height={750}
 				/>
@@ -122,6 +123,7 @@ export default function BulkAirtime() {
 					alt="Image showing two screens side by side - Select from contacts unselected and the same screen with selection"
 					width={1296}
 					height={750}
+					className="rounded-[2rem]"
 				/>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
@@ -130,6 +132,7 @@ export default function BulkAirtime() {
 					alt="Image showing two screens side by side - Send Airtime with the first contact selected and the same screen with the second contact selected"
 					width={1296}
 					height={750}
+					className="rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					Clickable chips let users move through recipients quickly without losing focus or being
@@ -141,7 +144,7 @@ export default function BulkAirtime() {
 				alt="Two screens side by side: one showing the Summary screen, and the other showing the same screen with a payment bottom sheet visible"
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px]"
+				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
 			/>
 
 			<section className="mt-[52px] md:mt-[104px]">
@@ -159,7 +162,7 @@ export default function BulkAirtime() {
 					alt="Three screens side by side: the left shows manual number input, the center shows a help tip bottom sheet, and the right shows an error state for the input field"
 					width={1296}
 					height={750}
-					className="w-full"
+					className="w-full rounded-[2rem]"
 				/>
 			</section>
 			<LazyImage
@@ -167,21 +170,21 @@ export default function BulkAirtime() {
 				alt="Image showing two screens side by side - Send Airtime with the first recipient number selected and the same screen with the second recipient number selected"
 				width={1296}
 				height={750}
-				className="w-full mt-[52px] md:mt-[104px]"
+				className="w-full mt-[52px] md:mt-[104px] rounded-[2rem]"
 			/>
 			<LazyImage
 				src={seventhImage}
 				alt="Three screens side by side: the left shows the Summary screen, the center shows the Summary screen with the Remove Recipient modal open, and the right shows the success modal after removal"
 				width={1296}
 				height={750}
-				className="w-full mt-[52px] md:mt-[104px]"
+				className="w-full mt-[52px] md:mt-[104px] rounded-[2rem]"
 			/>
 			<LazyImage
 				src={eighthImage}
 				alt="Four images side by side: the first shows a transaction summary for all successful airtime purchases; the second shows detailed information for a specific internet service provider purchase, including recipient, transaction type, number, data, and payment method; the third shows a transaction summary with one failed purchase among three successful ones; and the fourth shows detailed information for the failed transaction, including all related details"
 				width={1296}
 				height={750}
-				className="w-full my-[52px] md:my-[104px]"
+				className="w-full my-[52px] md:my-[104px] rounded-[2rem]"
 			/>
 		</main>
 	);
