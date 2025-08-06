@@ -20,7 +20,7 @@ const titles = [
 
 	{
 		id: uuidv4(),
-		title: "Designer Engineer",
+		title: "Design Engineer",
 	},
 	{
 		id: uuidv4(),
