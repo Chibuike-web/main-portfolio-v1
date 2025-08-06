@@ -35,7 +35,7 @@ export default function Medibridge() {
 				<img
 					src={heroImage}
 					alt="Image showing a macbook laptop ona  concrete displaying the dasbaord screen"
-					className="w-full h-full object-cover rounded-[2rem]"
+					className="w-full h-full object-cover rounded-[1rem] md:rounded-[2rem]"
 				/>
 			</figure>
 			<section className="flex flex-col md:flex-row gap-6">
@@ -102,7 +102,7 @@ export default function Medibridge() {
 					alt="Image showing onboarding screen"
 					width={1296}
 					height={750}
-					className="rounded-[2rem]"
+					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					I kept the entry screen simple and focused. When hospitals land here, they’re greeted with
@@ -116,7 +116,7 @@ export default function Medibridge() {
 					alt="Image showing signup screen"
 					width={1296}
 					height={750}
-					className="rounded-[2rem]"
+					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					The sign-up screen is designed to clearly request the key information needed from the
@@ -129,14 +129,14 @@ export default function Medibridge() {
 				alt="Image showing two screens side by side — the left screen displays the institution document upload, while the right screen shows the administrator sign-up form."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<LazyImage
 				src={fourthImage}
 				alt="Image showing an empty dashboard screen, ready to display hospital data once records are added."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<section className="mt-[52px] md:mt-[104px]">
 				<div className="flex flex-col gap-[10px]">
@@ -156,7 +156,7 @@ export default function Medibridge() {
 					alt="Image showing two screens side by side — the left screen displays the “Choose or drag to upload patient’s record” modal, and the right screen shows the final uploaded state."
 					width={1296}
 					height={750}
-					className="rounded-[2rem]"
+					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 			</section>
 			<section className="mt-[52px] md:mt-[104px]">
@@ -165,7 +165,7 @@ export default function Medibridge() {
 					alt="Image showing two screens side by side — the left screen displays the completed data extraction state, while the right screen shows the extracted content."
 					width={1296}
 					height={750}
-					className="rounded-[2rem]"
+					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
 					After upload, the extracted data is shown clearly so staff can review and confirm it. The
@@ -178,21 +178,21 @@ export default function Medibridge() {
 				alt="Image showing a filled dashboard screen with the Dashboard menu active, displaying key hospital metrics and activity."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<LazyImage
 				src={eighthImage}
 				alt="Image showing a filled dashboard screen with the Patient Records menu active, displaying existing patient records."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<LazyImage
 				src={ninthImage}
 				alt="Image showing a filled dashboard screen with the Transfers menu active, displaying existing transfer records."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<section className="mt-[52px] md:mt-[104px]">
 				<div className="flex flex-col gap-[10px]">
@@ -210,7 +210,7 @@ export default function Medibridge() {
 					alt="Image showing two screens Image showing two modals side by side — the left modal displays the patient selection in an inactive state, while the right modal shows the active state with the dropdown expanded."
 					width={1296}
 					height={750}
-					className="rounded-[2rem]"
+					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 			</section>
 			<LazyImage
@@ -218,21 +218,21 @@ export default function Medibridge() {
 				alt="Image showing two modals side by side — the left modal displays empty fields for the target hospital name and admin email, while the right modal shows the same fields filled out."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<LazyImage
 				src={twelfthImage}
 				alt="Image showing two modals side by side — the left modal displays empty fields for clinical document, format, and extra note, while the right modal shows the same fields filled out."
 				width={1296}
 				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[2rem]"
+				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 			<LazyImage
 				src={thirteenthImage}
 				alt="Image showing two review modals side by side — the left modal displays the checkbox for confirmation unchecked, while the right modal shows the same checkbox checked."
 				width={1296}
 				height={750}
-				className="my-[52px] md:my-[104px] rounded-[2rem]"
+				className="my-[52px] md:my-[104px] rounded-[1rem] md:rounded-[2rem]"
 			/>
 		</main>
 	);
