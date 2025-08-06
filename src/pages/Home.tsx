@@ -78,8 +78,8 @@ export default function Home() {
 					<div className="flex items-center gap-6">
 						<CustomMotion
 							size="sm"
-							variant="primary"
-							className="flex gap-[6px] items-center bg-gray-100 text-gray-700 rounded-full"
+							variant="secondary"
+							className="flex gap-[6px] rounded-full"
 							onClick={copyEmail}
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
