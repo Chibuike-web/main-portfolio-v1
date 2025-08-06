@@ -14,9 +14,9 @@ const DesktopNav = () => {
 	return (
 		<nav className="bg-white py-[22px]">
 			<header className="mx-auto w-full max-w-[1296px] grid grid-cols-3 place-items-center gap-6 px-6 xl:px-0">
-				<figure className="w-full">
-					<Logo className="w-auto text-gray-700" />
-				</figure>
+				<Button as="link" to="/" className="w-full">
+					<Logo className=" text-gray-700" />
+				</Button>
 				<div className="bg-gray-100 flex items-center w-full max-w-max gap-1 p-1 rounded-full">
 					<NavLink
 						to="/"

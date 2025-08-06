@@ -32,12 +32,12 @@ export default function Button({ className, variant, size, fullWidth, as, ...pro
 }
 
 const buttonVariants = cva(
-	"flex items-center justify-between font-semibold cursor-pointer rounded-full pl-[16px] pr-[14px]",
+	"flex items-center justify-between font-semibold cursor-pointer rounded-full",
 	{
 		variants: {
 			variant: {
-				primary: "bg-gray-700 text-white",
-				secondary: "bg-gray-100 text-gray-700",
+				primary: "pl-[16px] pr-[14px] bg-gray-700 text-white",
+				secondary: "pl-[16px] pr-[14px] bg-gray-100 text-gray-700",
 			},
 			size: {
 				sm: "h-[36px]  text-sm",
