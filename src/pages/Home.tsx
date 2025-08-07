@@ -75,7 +75,7 @@ export default function Home() {
 						<span className="font-semibold text-gray-700">looks good</span> and{" "}
 						<span className="font-semibold text-gray-700">feels great</span> to use.
 					</p>
-					<div className="flex items-center gap-6">
+					<div className="flex items-center gap-2">
 						<CustomMotion
 							size="sm"
 							variant="secondary"
