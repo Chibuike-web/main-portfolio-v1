@@ -58,7 +58,7 @@ const buttonVariants = cva(
 	}
 );
 
-const MotionButton = motion(Button);
+const MotionButton = motion.create(Button);
 type MotionButtonProps = ButtonProps & MotionProps;
 
 export const CustomMotion = (props: MotionButtonProps) => {

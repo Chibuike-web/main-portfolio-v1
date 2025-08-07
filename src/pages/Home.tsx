@@ -76,28 +76,31 @@ export default function Home() {
 						<span className="font-semibold text-gray-700">feels great</span> to use.
 					</p>
 					<div className="flex items-center gap-2">
-						<CustomMotion
-							size="sm"
-							variant="secondary"
-							className="flex gap-[6px] rounded-full"
-							onClick={copyEmail}
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-						>
-							Copy email <CopyIcon />{" "}
-							{copyStatus && (
-								<motion.span
-									initial={{ opacity: 0, y: -5 }}
-									animate={{ opacity: 1, y: 0 }}
-									exit={{ opacity: 0, y: -5 }}
-									transition={{ duration: 0.2 }}
-									className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700"
-								>
-									{copyStatus}
-								</motion.span>
-							)}
-						</CustomMotion>
-
+						<div className="relative">
+							<CustomMotion
+								size="sm"
+								variant="secondary"
+								className="flex gap-[6px] rounded-full"
+								onClick={copyEmail}
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+							>
+								Copy email <CopyIcon />{" "}
+							</CustomMotion>
+							<AnimatePresence>
+								{copyStatus && (
+									<motion.span
+										initial={{ opacity: 0, y: -5 }}
+										animate={{ opacity: 1, y: 0 }}
+										exit={{ opacity: 0, y: -5 }}
+										transition={{ duration: 0.2 }}
+										className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700 font-medium"
+									>
+										{copyStatus}
+									</motion.span>
+								)}
+							</AnimatePresence>
+						</div>
 						<CustomMotion
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
