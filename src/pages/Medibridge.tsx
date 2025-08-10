@@ -34,7 +34,7 @@ export default function Medibridge() {
 			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
 				<img
 					src={heroImage}
-					alt="Image showing a macbook laptop ona  concrete displaying the dasbaord screen"
+					alt="Image showing a macbook laptop on a concrete displaying the dasbaord screen"
 					className="w-full h-full object-cover rounded-[1rem] md:rounded-[2rem]"
 				/>
 			</figure>
