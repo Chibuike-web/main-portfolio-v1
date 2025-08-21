@@ -10,6 +10,7 @@ import modimal from "../assets/home/Modimal.svg";
 import golobe from "../assets/home/Golobe.svg";
 import sideProject from "../assets/home/Side-Project.svg";
 import euphoria from "../assets/home/Euphoria.svg";
+import exclusive from "../assets/home/Exclusive.svg";
 
 export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
@@ -86,6 +87,16 @@ export const projects: Projects[] = [
 		type: [
 			{ value: "Live Site", link: "https://golobe-otv2.vercel.app/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/Golobe" },
+		],
+	},
+	{
+		image: exclusive,
+		title: "Exclusive",
+		subtitle: "Ecommerce Website",
+		year: 2025,
+		type: [
+			{ value: "Live Site", link: "https://react-task-four-two.vercel.app/" },
+			{ value: "Github", link: "https://github.com/Chibuike-web/react-task-four" },
 		],
 	},
 
