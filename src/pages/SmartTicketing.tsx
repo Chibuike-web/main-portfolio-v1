@@ -34,6 +34,8 @@ export default function SmartTicketing() {
 			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
 				<img
 					src={heroImage}
+					width="1296"
+					height="840"
 					alt="Two stacked iPhone 16 Pro devices resting on a rocky surface, showing the Event Details and Select Ticket screens"
 					className="w-full h-full object-cover rounded-[1rem] md:rounded-[2rem]"
 				/>

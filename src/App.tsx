@@ -10,6 +10,7 @@ import Medibridge from "./pages/Medibridge";
 import { ReactLenis, type LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
 import { cancelFrame, frame } from "motion/react";
+import BurnoutLeave from "./pages/BurnoutLeave";
 
 export default function App() {
 	const location = useLocation();
@@ -38,6 +39,8 @@ export default function App() {
 				<Route path="/bulk-airtime" element={<BulkAirtime />} />
 				<Route path="/smart-ticketing" element={<SmartTicketing />} />
 				<Route path="/medibridge" element={<Medibridge />} />
+				<Route path="/burnout-leave" element={<BurnoutLeave />} />
+				<Route path="/*" element={<Home />} />
 			</Routes>
 			{(pathname === "/" || pathname === "/about") && <Footer />}
 		</>

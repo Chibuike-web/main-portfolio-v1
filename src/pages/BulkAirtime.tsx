@@ -33,6 +33,8 @@ export default function BulkAirtime() {
 			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
 				<img
 					src={heroImage}
+					width="1296"
+					height="840"
 					alt="A mockup of the Send Airtime screen displayed on an iPhone 16 Pro resting on a bubbly surface"
 					className="w-full h-full object-cover rounded-[1rem] md:rounded-[2rem]"
 					loading="lazy"

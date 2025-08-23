@@ -78,6 +78,7 @@ export default function Home() {
 			<section className="flex gap-2 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] md:mt-[104px]">
 				{filter.map((c) => (
 					<Button
+						key={c.id}
 						variant={filterId === c.id ? "primary" : "secondary"}
 						className="py-[10px] px-[14px]"
 						onClick={() => handleFilter(c.id)}

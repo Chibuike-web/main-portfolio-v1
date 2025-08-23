@@ -49,10 +49,7 @@ interface CardSubTitleProps extends React.HTMLAttributes<HTMLParagraphElement> {
 Card.SubTitle = function CardSubTitle({ className, ...props }: CardSubTitleProps) {
 	return (
 		<p
-			className={cn(
-				"flex items-center justify-between font-semibold font-secondary text-gray-700",
-				className
-			)}
+			className={cn("font-semibold font-secondary text-gray-700 truncate min-w-0", className)}
 			{...props}
 		/>
 	);
