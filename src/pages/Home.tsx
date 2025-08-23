@@ -1,69 +1,26 @@
 import { useState } from "react";
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
-import { CustomMotion } from "../components/Button";
+import Button, { CustomMotion } from "../components/Button";
 import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
 import type { ProjectType } from "../lib/utils";
 import { motion, AnimatePresence } from "motion/react";
-import { v4 as uuidv4 } from "uuid";
-
-const titles = [
-	{
-		id: uuidv4(),
-		title: "Product Designer",
-	},
-	{
-		id: uuidv4(),
-		title: "Interaction Designer",
-	},
-
-	{
-		id: uuidv4(),
-		title: "Design Engineer",
-	},
-	{
-		id: uuidv4(),
-		title: "UI Engineer",
-	},
-	{
-		id: uuidv4(),
-		title: "UX Engineer",
-	},
-	{
-		id: uuidv4(),
-		title: "Creative Technologist",
-	},
-	{
-		id: uuidv4(),
-		title: "Fullstack Engineer",
-	},
-];
 
 export default function Home() {
 	const { copyStatus, copyEmail } = useCopyEmail();
-	const repeatedTitles = [...titles, ...titles];
-
+	const [filterId, setFilterId] = useState("all");
+	const handleFilter = (id: string) => {
+		setFilterId(id);
+	};
+	const filteredProjects =
+		filterId === "all" ? projects : projects.filter((p) => p.category === filterId);
 	return (
 		<div>
 			<section className="grid grid-cols-1 md:grid-cols-3 md:gap-x-6 gap-y-5 md:gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] sm:mt-[104px]">
 				<h1 className="flex flex-col gap-1 font-semibold tracking-[-0.02em] text-[clamp(2rem,calc(3vw+2vh),4rem)] col-span-3 lg:col-span-2 text-gray-700">
 					<span>Hi, I’m Chibuike</span>
-					<div className="overflow-hidden h-[1.2em] relative">
-						<motion.div
-							className="flex flex-col absolute"
-							animate={{ y: ["0%", "-100%"] }}
-							transition={{
-								duration: titles.length * 3,
-								ease: "linear",
-								repeat: Infinity,
-							}}
-						>
-							{repeatedTitles.map((item, i) => (
-								<p key={i}>{item.title}</p>
-							))}
-						</motion.div>
-					</div>
+					<span>Design Engineer</span>
 				</h1>
 				<div className="flex flex-col gap-10 col-span-3 lg:col-span-1">
 					<p className="leading-[1.6] text-gray-500 font-medium w-full">
@@ -117,8 +74,20 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 my-[52px] md:my-[104px]">
-				{projects.map((item) => (
+
+			<section className="flex gap-2 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] md:mt-[104px]">
+				{filter.map((c) => (
+					<Button
+						variant={filterId === c.id ? "primary" : "secondary"}
+						className="py-[10px] px-[14px]"
+						onClick={() => handleFilter(c.id)}
+					>
+						{c.text}
+					</Button>
+				))}
+			</section>
+			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]">
+				{filteredProjects.map((item) => (
 					<Card key={item.id}>
 						<Card.Image>
 							<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
@@ -138,6 +107,21 @@ export default function Home() {
 		</div>
 	);
 }
+
+const filter = [
+	{
+		id: "all",
+		text: "All",
+	},
+	{
+		id: "design",
+		text: "Design",
+	},
+	{
+		id: "engineering",
+		text: "Engineering",
+	},
+];
 
 const Buttons = ({ type }: { type: ProjectType | ProjectType[] }) => {
 	const [hovered, setHovered] = useState(false);

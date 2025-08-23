@@ -30,14 +30,14 @@ export const handleCopy = async (
 
 export type ProjectType = { value: string; link: string };
 
-type Projects = {
+export type Projects = {
 	id: string;
 	image: string;
 	title: string;
 	subtitle: string;
 	year: number;
 	type: ProjectType | ProjectType[];
-	notReady?: boolean;
+	category: string;
 };
 
 export const projects: Projects[] = [
@@ -47,6 +47,7 @@ export const projects: Projects[] = [
 		subtitle: "Bulk Airtime",
 		year: 2024,
 		type: { value: "Case Study", link: "/bulk-airtime" },
+		category: "design",
 	},
 	{
 		image: kulipal,
@@ -54,6 +55,7 @@ export const projects: Projects[] = [
 		subtitle: "Smart Ticketing",
 		year: 2025,
 		type: { value: "Case Study", link: "/smart-ticketing" },
+		category: "design",
 	},
 	{
 		image: medibridge,
@@ -61,13 +63,15 @@ export const projects: Projects[] = [
 		subtitle: "AI-Powered EHR",
 		year: 2025,
 		type: { value: "Case Study", link: "/medibridge" },
+		category: "design",
 	},
 	{
 		image: zenly,
 		title: "Zenly",
 		subtitle: "Burnout Leave",
 		year: 2024,
-		type: { value: "Case Study", link: "/" },
+		type: { value: "Case Study", link: "/burnout-leave" },
+		category: "design",
 	},
 	{
 		image: modimal,
@@ -78,6 +82,7 @@ export const projects: Projects[] = [
 			{ value: "Live Site", link: "https://modimal-4keo.vercel.app/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/Modimal" },
 		],
+		category: "engineering",
 	},
 	{
 		image: golobe,
@@ -88,6 +93,7 @@ export const projects: Projects[] = [
 			{ value: "Live Site", link: "https://golobe-otv2.vercel.app/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/Golobe" },
 		],
+		category: "engineering",
 	},
 	{
 		image: exclusive,
@@ -98,6 +104,7 @@ export const projects: Projects[] = [
 			{ value: "Live Site", link: "https://react-task-four-two.vercel.app/" },
 			{ value: "Github", link: "https://github.com/Chibuike-web/react-task-four" },
 		],
+		category: "engineering",
 	},
 
 	{
@@ -109,6 +116,7 @@ export const projects: Projects[] = [
 			value: "Github",
 			link: "https://github.com/Chibuike-web/Practice-Projects/tree/main/Movie%20Search",
 		},
+		category: "engineering",
 	},
 	{
 		image: sideProject,
@@ -119,6 +127,7 @@ export const projects: Projects[] = [
 			value: "Github",
 			link: "https://github.com/Chibuike-web/AI-Experiments/tree/main/PDF%20Summarizer",
 		},
+		category: "engineering",
 	},
 	{
 		image: sideProject,
@@ -129,6 +138,7 @@ export const projects: Projects[] = [
 			value: "Github",
 			link: "https://github.com/Chibuike-web/AI-Experiments/tree/main/RemoveBg",
 		},
+		category: "engineering",
 	},
 	{
 		image: sideProject,
@@ -139,6 +149,7 @@ export const projects: Projects[] = [
 			value: "Github",
 			link: "https://github.com/Chibuike-web/Practice-Projects/tree/main/Recipe%20Finder",
 		},
+		category: "engineering",
 	},
 	{
 		image: euphoria,
@@ -146,6 +157,7 @@ export const projects: Projects[] = [
 		subtitle: "Ecommerce (Apparels) Website",
 		year: 2025,
 		type: { value: "Github", link: "https://github.com/Chibuike-web/euphoria" },
+		category: "engineering",
 	},
 ].map((item) => ({
 	id: uuidv4(),
