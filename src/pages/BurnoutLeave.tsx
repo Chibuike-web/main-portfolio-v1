@@ -182,7 +182,7 @@ export default function BurnoutLeave() {
 
 			<section className="mt-[52px] md:mt-[104px]">
 				<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
-					Assign Team Lead
+					Manage Team Member
 				</h2>
 
 				<LazyImage
