@@ -6,15 +6,15 @@ import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
 import type { ProjectType } from "../lib/utils";
 import { motion, AnimatePresence } from "motion/react";
+import { useSearchParams } from "react-router";
 
 export default function Home() {
 	const { copyStatus, copyEmail } = useCopyEmail();
-	const [filterId, setFilterId] = useState("all");
-	const handleFilter = (id: string) => {
-		setFilterId(id);
-	};
+	const [searchParams, setSearchParams] = useSearchParams();
+
+	const category = searchParams.get("category") ?? "all";
 	const filteredProjects =
-		filterId === "all" ? projects : projects.filter((p) => p.category === filterId);
+		category === "all" ? projects : projects.filter((p) => p.category === category);
 	return (
 		<div>
 			<section className="grid grid-cols-1 md:grid-cols-3 md:gap-x-6 gap-y-5 md:gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] sm:mt-[104px]">
@@ -79,9 +79,9 @@ export default function Home() {
 				{filter.map((c) => (
 					<Button
 						key={c.id}
-						variant={filterId === c.id ? "primary" : "secondary"}
+						variant={category === c.id ? "primary" : "secondary"}
 						className="py-[10px] px-[14px]"
-						onClick={() => handleFilter(c.id)}
+						onClick={() => setSearchParams({ category: c.id })}
 					>
 						{c.text}
 					</Button>
