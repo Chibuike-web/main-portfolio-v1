@@ -106,6 +106,20 @@ export const projects: Projects[] = [
 		],
 		category: "engineering",
 	},
+	{
+		image: euphoria,
+		title: "Euphoria",
+		subtitle: "Ecommerce Website",
+		year: 2025,
+		type: [
+			{ value: "Live Site", link: "https://euphoria-puce.vercel.app/" },
+			{
+				value: "Github",
+				link: "https://github.com/Chibuike-web/euphoria",
+			},
+		],
+		category: "engineering",
+	},
 
 	{
 		image: sideProject,
@@ -149,14 +163,6 @@ export const projects: Projects[] = [
 			value: "Github",
 			link: "https://github.com/Chibuike-web/Practice-Projects/tree/main/Recipe%20Finder",
 		},
-		category: "engineering",
-	},
-	{
-		image: euphoria,
-		title: "Euphoria",
-		subtitle: "Ecommerce (Apparels) Website",
-		year: 2025,
-		type: { value: "Github", link: "https://github.com/Chibuike-web/euphoria" },
 		category: "engineering",
 	},
 ].map((item) => ({
