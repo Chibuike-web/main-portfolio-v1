@@ -139,7 +139,7 @@ export const projects: Projects[] = [
 		year: 2025,
 		type: {
 			value: "Github",
-			link: "https://github.com/Chibuike-web/AI-Experiments/tree/main/PDF%20Summarizer",
+			link: "https://github.com/Chibuike-web/ai-experiments/tree/main/pdf-summarizer",
 		},
 		category: "engineering",
 	},
@@ -150,7 +150,7 @@ export const projects: Projects[] = [
 		year: 2025,
 		type: {
 			value: "Github",
-			link: "https://github.com/Chibuike-web/AI-Experiments/tree/main/RemoveBg",
+			link: "https://github.com/Chibuike-web/ai-experiments/tree/main/remove-bg",
 		},
 		category: "engineering",
 	},
