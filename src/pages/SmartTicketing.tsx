@@ -14,7 +14,7 @@ import tenthImage from "../assets/smart-ticketing/tenth.webp";
 import eleventhImage from "../assets/smart-ticketing/eleventh.webp";
 import twelfthImage from "../assets/smart-ticketing/twelfth.webp";
 import thirteenthImage from "../assets/smart-ticketing/thirteenth.webp";
-import { LazyImage } from "../Hooks";
+import { LazyImage } from "../components/LazyImage";
 
 export default function SmartTicketing() {
 	return (

@@ -13,7 +13,7 @@ import ninthImage from "../assets/burnout-leave/ninth.webp";
 import tenthImage from "../assets/burnout-leave/tenth.webp";
 import eleventhImage from "../assets/burnout-leave/eleventh.webp";
 import twelfthImage from "../assets/burnout-leave/twelfth.webp";
-import { LazyImage } from "../Hooks";
+import { LazyImage } from "../components/LazyImage";
 
 export default function BurnoutLeave() {
 	return (

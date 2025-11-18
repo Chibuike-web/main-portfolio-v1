@@ -14,7 +14,7 @@ import tenthImage from "../assets/medibridge/tenth.webp";
 import eleventhImage from "../assets/medibridge/eleventh.webp";
 import twelfthImage from "../assets/medibridge/twelfth.webp";
 import thirteenthImage from "../assets/medibridge/thirteenth.webp";
-import { LazyImage } from "../Hooks";
+import { LazyImage } from "../components/LazyImage";
 
 export default function Medibridge() {
 	return (

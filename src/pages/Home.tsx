@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
-import Button, { CustomComponentMotion, CustomMotion } from "../components/Button";
+import { CustomComponentMotion, CustomMotion } from "../components/Button";
 import Card from "../components/Card";
-import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
 import type { ProjectType } from "../lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import { useSearchParams } from "react-router";
+import { useCopyEmail } from "../hooks/useCopyEmail";
 
 export default function Home() {
 	const { copyStatus, copyEmail } = useCopyEmail();

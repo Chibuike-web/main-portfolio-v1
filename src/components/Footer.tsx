@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { BackArrowIcon } from "../assets/icons";
-import { useCopyEmail } from "../Hooks";
 import { AnimatePresence, motion } from "motion/react";
+import { useCopyEmail } from "../hooks/useCopyEmail";
 
 export default function Footer() {
 	const { copyStatus, copyEmail } = useCopyEmail();

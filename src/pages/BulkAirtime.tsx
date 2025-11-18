@@ -9,7 +9,7 @@ import fifthImage from "../assets/bulk-airtime/fifth.webp";
 import sixthImage from "../assets/bulk-airtime/sixth.webp";
 import seventhImage from "../assets/bulk-airtime/seventh.webp";
 import eighthImage from "../assets/bulk-airtime/eighth.webp";
-import { LazyImage } from "../Hooks";
+import { LazyImage } from "../components/LazyImage";
 
 export default function BulkAirtime() {
 	return (

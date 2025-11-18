@@ -1,8 +1,9 @@
 import { NavLink } from "react-router";
 import { CancelIcon, Logo, MenuIcon, RightArrowIcon } from "../assets/icons";
 import { useEffect, useState } from "react";
-import { useMediaQuery, useRealTime } from "../Hooks";
 import Button from "./Button";
+import { useMediaQuery } from "../hooks/useMediaQuery";
+import { useRealTime } from "../hooks/useRealTime";
 
 export default function Navbar() {
 	const isDesktop = useMediaQuery("(min-width: 800px)");
