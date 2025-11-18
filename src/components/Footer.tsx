@@ -2,6 +2,7 @@ import { NavLink } from "react-router";
 import { BackArrowIcon } from "../assets/icons";
 import { AnimatePresence, motion } from "motion/react";
 import { useCopyEmail } from "../hooks/useCopyEmail";
+import { cn } from "../lib/utils";
 
 export default function Footer() {
 	const { copyStatus, copyEmail } = useCopyEmail();
@@ -22,9 +23,11 @@ export default function Footer() {
 							<NavLink
 								to="/"
 								className={({ isActive }) =>
-									`text-gray-700  ${
-										isActive ? " font-semibold" : ""
-									} hover:text-gray-700 hover:underline`
+									cn(
+										"text-gray-700",
+										isActive ? "font-semibold" : "",
+										"hover:text-gray-700 hover:underline"
+									)
 								}
 							>
 								Work
@@ -32,9 +35,11 @@ export default function Footer() {
 							<NavLink
 								to="/about"
 								className={({ isActive }) =>
-									`text-gray-700  ${
-										isActive ? " font-semibold" : ""
-									} hover:text-gray-700 hover:underline`
+									cn(
+										"text-gray-700",
+										isActive ? "font-semibold" : "",
+										"hover:text-gray-700 hover:underline"
+									)
 								}
 							>
 								About

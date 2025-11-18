@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { handleCopy } from "../lib/utils";
+import { handleCopy } from "../lib/copy";
 
 export const useCopyEmail = () => {
 	const [copyStatus, setCopyStatus] = useState("");
