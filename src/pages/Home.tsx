@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
-import Button, { CustomMotion } from "../components/Button";
+import Button, { CustomComponentMotion, CustomMotion } from "../components/Button";
 import Card from "../components/Card";
 import { useCopyEmail } from "../Hooks";
 import { projects } from "../lib/utils";
@@ -19,11 +19,31 @@ export default function Home() {
 		<div>
 			<section className="grid grid-cols-1 md:grid-cols-3 md:gap-x-6 gap-y-5 md:gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] sm:mt-[104px]">
 				<h1 className="flex flex-col gap-1 font-semibold tracking-[-0.02em] text-[clamp(2rem,calc(3vw+2vh),4rem)] col-span-3 lg:col-span-2 text-gray-700">
-					<span>Hi, I’m Chibuike</span>
-					<span>Design Engineer</span>
+					<CustomComponentMotion
+						as="span"
+						initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+						animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+					>
+						Hi, I’m Chibuike
+					</CustomComponentMotion>
+					<CustomComponentMotion
+						as="span"
+						initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+						animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+					>
+						Design Engineer
+					</CustomComponentMotion>
 				</h1>
 				<div className="flex flex-col gap-10 col-span-3 lg:col-span-1">
-					<p className="leading-[1.6] text-gray-500 font-medium w-full">
+					<CustomComponentMotion
+						as="p"
+						initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+						animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+						className="leading-[1.6] text-gray-500 font-medium w-full"
+					>
 						I’m a hybrid of{" "}
 						<span className="font-semibold text-gray-700">designer and developer</span>. I blend{" "}
 						<span className="font-semibold text-gray-700">design and code</span> to build{" "}
@@ -31,78 +51,95 @@ export default function Home() {
 						<span>human-centered software</span> that{" "}
 						<span className="font-semibold text-gray-700">looks good</span> and{" "}
 						<span className="font-semibold text-gray-700">feels great</span> to use.
-					</p>
-					<div className="flex items-center gap-2">
-						<div className="relative">
+					</CustomComponentMotion>
+					<CustomComponentMotion
+						initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+						animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+					>
+						<div className="flex items-center gap-2">
+							<div className="relative">
+								<CustomMotion
+									size="sm"
+									variant="secondary"
+									className="flex gap-[6px] rounded-full"
+									onClick={copyEmail}
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}
+								>
+									Copy email <CopyIcon />
+								</CustomMotion>
+								<AnimatePresence>
+									{copyStatus && (
+										<motion.span
+											initial={{ opacity: 0, y: -5 }}
+											animate={{ opacity: 1, y: 0 }}
+											exit={{ opacity: 0, y: -5 }}
+											transition={{ duration: 0.2 }}
+											className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700 font-medium"
+										>
+											{copyStatus}
+										</motion.span>
+									)}
+								</AnimatePresence>
+							</div>
 							<CustomMotion
-								size="sm"
-								variant="secondary"
-								className="flex gap-[6px] rounded-full"
-								onClick={copyEmail}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
+								size="sm"
+								variant="primary"
+								as="a"
+								href="https://www.linkedin.com/in/chibuike-maduabuchi"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="flex gap-[6px] items-center bg-gray-100 text-gray-700 rounded-full"
 							>
-								Copy email <CopyIcon />{" "}
+								Linkedin <LinkedinLogo />
 							</CustomMotion>
-							<AnimatePresence>
-								{copyStatus && (
-									<motion.span
-										initial={{ opacity: 0, y: -5 }}
-										animate={{ opacity: 1, y: 0 }}
-										exit={{ opacity: 0, y: -5 }}
-										transition={{ duration: 0.2 }}
-										className="bottom-[-10px] left-0 translate-y-1/1 absolute text-gray-700 font-medium"
-									>
-										{copyStatus}
-									</motion.span>
-								)}
-							</AnimatePresence>
 						</div>
-						<CustomMotion
-							whileHover={{ scale: 1.05 }}
-							whileTap={{ scale: 0.95 }}
-							size="sm"
-							variant="primary"
-							as="a"
-							href="https://www.linkedin.com/in/chibuike-maduabuchi"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex gap-[6px] items-center bg-gray-100 text-gray-700 rounded-full"
-						>
-							Linkedin <LinkedinLogo />
-						</CustomMotion>
-					</div>
+					</CustomComponentMotion>
 				</div>
 			</section>
 
 			<section className="flex gap-2 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] md:mt-[104px]">
-				{filter.map((c) => (
-					<Button
+				{filter.map((c, i) => (
+					<CustomMotion
+						initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 * i }}
+						viewport={{ once: true, amount: 0.2 }}
 						key={c.id}
 						variant={category === c.id ? "primary" : "secondary"}
 						className="py-[10px] px-[14px]"
 						onClick={() => setSearchParams({ category: c.id })}
 					>
 						{c.text}
-					</Button>
+					</CustomMotion>
 				))}
 			</section>
 			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]">
-				{filteredProjects.map((item) => (
-					<Card key={item.id}>
-						<Card.Image>
-							<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-						</Card.Image>
-						<Card.Content>
-							<div className="flex flex-col gap-[10px] px-1">
-								<Card.Title>
-									<h3>{item.title.toUpperCase()}</h3> <p>{item.year}</p>
-								</Card.Title>
-								<Card.SubTitle>{item.subtitle.toUpperCase()}</Card.SubTitle>
-							</div>
-							<Buttons type={item.type} />
-						</Card.Content>
-					</Card>
+				{filteredProjects.map((item, i) => (
+					<CustomComponentMotion
+						initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+						transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 * i }}
+						viewport={{ once: true, amount: 0.2 }}
+					>
+						<Card key={item.id}>
+							<Card.Image>
+								<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+							</Card.Image>
+							<Card.Content>
+								<div className="flex flex-col gap-[10px] px-1">
+									<Card.Title>
+										<h3>{item.title.toUpperCase()}</h3> <p>{item.year}</p>
+									</Card.Title>
+									<Card.SubTitle>{item.subtitle.toUpperCase()}</Card.SubTitle>
+								</div>
+								<Buttons type={item.type} />
+							</Card.Content>
+						</Card>
+					</CustomComponentMotion>
 				))}
 			</section>
 		</div>

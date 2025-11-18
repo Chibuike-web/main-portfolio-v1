@@ -21,41 +21,66 @@ export default function Footer() {
 						<div className="flex flex-col gap-4 leading-[1]">
 							<NavLink
 								to="/"
-								className={({ isActive }) => `text-gray-700  ${isActive ? " font-semibold" : ""}`}
+								className={({ isActive }) =>
+									`text-gray-700  ${
+										isActive ? " font-semibold" : ""
+									} hover:text-gray-700 hover:underline`
+								}
 							>
 								Work
 							</NavLink>
 							<NavLink
 								to="/about"
-								className={({ isActive }) => `text-gray-700  ${isActive ? " font-semibold" : ""}`}
+								className={({ isActive }) =>
+									`text-gray-700  ${
+										isActive ? " font-semibold" : ""
+									} hover:text-gray-700 hover:underline`
+								}
 							>
 								About
 							</NavLink>
-							<a href="/chibuike-maduabuchi-resume.pdf" target="_blank" rel="noopener noreferrer">
+							<a
+								href="/chibuike-maduabuchi-resume.pdf"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="hover:text-gray-700 hover:underline"
+							>
 								Resume
 							</a>
 						</div>
 					</div>
 					<div className="flex flex-col gap-6 w-full">
 						<p className="font-semibold leading-[1]">Connect</p>
-						<div className="flex flex-col gap-4 leading-[1]">
+						<div className="flex flex-col gap-4 leading-[1] w-max">
 							<a
 								href="https://www.linkedin.com/in/chibuike-maduabuchi"
 								target="_blank"
 								rel="noopener noreferrer"
+								className="hover:text-gray-700 hover:underline"
 							>
 								Linkedin
 							</a>
-							<a href="https://github.com/Chibuike-web" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://github.com/Chibuike-web"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="hover:text-gray-700 hover:underline"
+							>
 								Github
 							</a>
-							<a href="https://codepen.io/chibuike-web" target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://codepen.io/chibuike-web"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="hover:text-gray-700 hover:underline"
+							>
 								Codepen
 							</a>
 							<a
 								href="https://dribbble.com/maduabuchichibuike"
 								target="_blank"
 								rel="noopener noreferrer"
+								className="hover:text-gray-700 hover:underline"
 							>
 								Dribbble
 							</a>

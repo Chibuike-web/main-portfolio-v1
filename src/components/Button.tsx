@@ -2,7 +2,12 @@ import { Link } from "react-router";
 import type { LinkProps } from "react-router";
 import { cva } from "class-variance-authority";
 import { cn } from "../lib/utils";
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import type {
+	AnchorHTMLAttributes,
+	ButtonHTMLAttributes,
+	ElementType,
+	HTMLAttributes,
+} from "react";
 import { motion, type MotionProps } from "motion/react";
 
 type BaseProps = {
@@ -63,4 +68,18 @@ type MotionButtonProps = ButtonProps & MotionProps;
 
 export const CustomMotion = (props: MotionButtonProps) => {
 	return <MotionButton {...props} />;
+};
+
+type CustomComponentMotionProps = MotionProps &
+	HTMLAttributes<HTMLElement> & {
+		as?: ElementType;
+	};
+
+export const CustomComponentMotion = ({
+	as: Component = "div",
+	...props
+}: CustomComponentMotionProps) => {
+	const MotionComponent = motion.create(Component);
+
+	return <MotionComponent {...props} />;
 };
