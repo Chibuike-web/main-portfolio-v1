@@ -1,6 +1,5 @@
-import { Routes, Route, useLocation } from "react-router";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ScrollToTop from "./ScrollToTop";
@@ -11,10 +10,9 @@ import { ReactLenis, type LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
 import { cancelFrame, frame } from "motion/react";
 import BurnoutLeave from "./pages/BurnoutLeave";
+import Layout from "./pages/Layout";
 
 export default function App() {
-	const location = useLocation();
-	const pathname = location.pathname;
 	const lenisRef = useRef<LenisRef>(null);
 
 	useEffect(() => {
@@ -32,17 +30,16 @@ export default function App() {
 		<>
 			<ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
 			<ScrollToTop />
-			{(pathname === "/" || pathname === "/about") && <Navbar />}
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
+				<Route element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="about" element={<About />} />
+				</Route>
 				<Route path="/bulk-airtime" element={<BulkAirtime />} />
 				<Route path="/smart-ticketing" element={<SmartTicketing />} />
 				<Route path="/medibridge" element={<Medibridge />} />
 				<Route path="/burnout-leave" element={<BurnoutLeave />} />
-				<Route path="/*" element={<Home />} />
 			</Routes>
-			{(pathname === "/" || pathname === "/about") && <Footer />}
 		</>
 	);
 }

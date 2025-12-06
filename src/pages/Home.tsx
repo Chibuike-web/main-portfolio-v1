@@ -141,6 +141,7 @@ const Section = () => {
 			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]">
 				{filteredProjects.map((item, i) => (
 					<MotionComponent
+						key={item.id}
 						initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
 						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 						transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 * i }}
