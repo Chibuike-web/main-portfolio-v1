@@ -116,22 +116,11 @@ export const projects: Projects[] = [
 	{
 		image: sideProject,
 		title: "Side-Project",
-		subtitle: "Pdf-Summarizer",
+		subtitle: "AI-Form Builder",
 		year: 2025,
 		type: {
 			value: "Github",
-			link: "https://github.com/Chibuike-web/ai-experiments/tree/main/pdf-summarizer",
-		},
-		category: "engineering",
-	},
-	{
-		image: sideProject,
-		title: "Side-Project",
-		subtitle: "Remove Background",
-		year: 2025,
-		type: {
-			value: "Github",
-			link: "https://github.com/Chibuike-web/ai-experiments/tree/main/remove-bg",
+			link: "https://github.com/Chibuike-web/ai-form-builder",
 		},
 		category: "engineering",
 	},
