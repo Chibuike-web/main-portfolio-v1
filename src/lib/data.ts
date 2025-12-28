@@ -126,6 +126,17 @@ export const projects: Projects[] = [
 	},
 	{
 		image: sideProject,
+		title: "Side-Project",
+		subtitle: "Email Agent",
+		year: 2025,
+		type: {
+			value: "Github",
+			link: "https://github.com/Chibuike-web/email-agent",
+		},
+		category: "engineering",
+	},
+	{
+		image: sideProject,
 		title: "Side Project",
 		subtitle: "Recipe Finder",
 		year: 2025,
