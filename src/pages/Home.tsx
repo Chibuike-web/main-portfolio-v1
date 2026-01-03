@@ -8,6 +8,7 @@ import { useCopyEmail } from "../hooks/useCopyEmail";
 import { MotionComponent } from "../components/MotionComponent";
 import { filter } from "../lib/filter";
 import { projects, type ProjectType } from "../lib/data";
+import { Tabs } from "radix-ui";
 
 export default function Home() {
 	return (
@@ -121,24 +122,41 @@ const Section = () => {
 	const filteredProjects =
 		category === "all" ? projects : projects.filter((p) => p.category === category);
 	return (
-		<>
-			<section className="flex gap-2 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] md:mt-[104px]">
+		<Tabs.Root
+			value={category}
+			onValueChange={(value) => {
+				setSearchParams({ category: value });
+			}}
+		>
+			<Tabs.List
+				defaultValue="all"
+				className="flex gap-2 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] md:mt-[104px]"
+			>
 				{filter.map((c, i) => (
-					<CustomMotion
-						initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
-						whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-						transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 * i }}
-						viewport={{ once: true, amount: 0.2 }}
+					<Tabs.Trigger
+						asChild
+						value={c.id}
 						key={c.id}
-						variant={category === c.id ? "primary" : "secondary"}
-						className="py-[10px] px-[14px]"
-						onClick={() => setSearchParams({ category: c.id })}
+						className="focus:outline-0 focus-within:ring-2 focus-within:ring-gray-200 focus-within:ring-offset-2"
 					>
-						{c.text}
-					</CustomMotion>
+						<CustomMotion
+							initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
+							whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+							transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 * i }}
+							viewport={{ once: true, amount: 0.2 }}
+							key={c.id}
+							variant={category === c.id ? "primary" : "secondary"}
+							className="py-[10px] px-[14px]"
+						>
+							{c.text}
+						</CustomMotion>
+					</Tabs.Trigger>
 				))}
-			</section>
-			<section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]">
+			</Tabs.List>
+			<Tabs.Content
+				value={category}
+				className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]"
+			>
 				{filteredProjects.map((item, i) => (
 					<MotionComponent
 						key={item.id}
@@ -163,8 +181,8 @@ const Section = () => {
 						</Card>
 					</MotionComponent>
 				))}
-			</section>
-		</>
+			</Tabs.Content>
+		</Tabs.Root>
 	);
 };
 
