@@ -32,7 +32,7 @@ export default function Button({ className, variant, size, fullWidth, as, ...pro
 }
 
 const buttonVariants = cva(
-	"flex items-center justify-between font-semibold cursor-pointer rounded-full",
+	"flex items-center justify-between font-semibold cursor-pointer rounded-full focus:outline-0 focus-within:ring-2 focus-within:ring-gray-200 focus-within:ring-offset-2",
 	{
 		variants: {
 			variant: {
