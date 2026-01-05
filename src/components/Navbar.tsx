@@ -40,7 +40,7 @@ const DesktopNav = () => {
 						About
 					</NavLink>
 					<a
-						href="/chibuike-maduabuchi-resume.pdf"
+						href="https://drive.google.com/file/d/1-Pp56NqO3jCauLwMdeoSMwgWw7UvlGnD/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="w-[112px] h-[36px] flex items-center justify-center rounded-full text-gray-500  focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-100"
