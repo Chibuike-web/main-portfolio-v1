@@ -58,20 +58,6 @@ export default function About() {
 					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4">
 						<p className="flex flex-col leading-[1.6]">
 							<span className="font-secondary text-gray-700 tracking-[0.08em] font-bold">
-								PRESTDESK TECHNOLOGIES LIMITED
-							</span>
-							<span className="font-secondary text-gray-500 tracking-[0.08em] font-medium">
-								2023-PRESENT
-							</span>
-						</p>
-						<p className="text-gray-500 leading-[1.6] ">
-							Led visual brand development and marketing design efforts, creating cohesive digital
-							assets and campaigns that strengthen brand identity and boost online engagement.
-						</p>
-					</div>
-					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4">
-						<p className="flex flex-col leading-[1.6]">
-							<span className="font-secondary text-gray-700 tracking-[0.08em] font-bold">
 								KULIPAL TECHNOLOGIES LIMITED
 							</span>
 							<span className="font-secondary text-gray-500 tracking-[0.08em] font-medium">

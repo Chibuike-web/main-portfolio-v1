@@ -12,7 +12,7 @@ export default function Footer() {
 			<div className="mx-auto w-full max-w-[1296px] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
 				<div>
 					<p className="font-semibold text-gray-700 leading-[1.6] max-w-[259px]">
-						Designed and Developed by Chibuike ©2025
+						Designed and Developed by Chibuike ©2026
 					</p>
 				</div>
 
