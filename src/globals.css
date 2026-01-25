@@ -7,9 +7,11 @@
 	--gray-700: hsl(220, 15%, 20%);
 
 	/* Typography */
-	--primary: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, "Helvetica Neue", Arial, sans-serif;
-	--mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+	--primary:
+		"Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif;
+	--mono:
+		"Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
 		"Courier New", monospace;
 }
 
@@ -30,4 +32,25 @@ body {
 	line-height: 1.2;
 	min-width: 0;
 	color: var(--gray-700);
+}
+
+.button {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 2px;
+		bottom: 0;
+		width: 100%;
+		transform: scaleX(0);
+		right: 0;
+		background-color: var(--color-gray-700);
+		transform-origin: bottom right;
+		transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
 }

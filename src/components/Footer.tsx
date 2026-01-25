@@ -23,11 +23,7 @@ export default function Footer() {
 							<NavLink
 								to="/"
 								className={({ isActive }) =>
-									cn(
-										"text-gray-700",
-										isActive ? "font-semibold" : "",
-										"hover:text-gray-700 hover:underline"
-									)
+									cn("text-gray-700 w-max", isActive ? "font-semibold" : "", "button")
 								}
 							>
 								Work
@@ -35,11 +31,7 @@ export default function Footer() {
 							<NavLink
 								to="/about"
 								className={({ isActive }) =>
-									cn(
-										"text-gray-700",
-										isActive ? "font-semibold" : "",
-										"hover:text-gray-700 hover:underline"
-									)
+									cn("text-gray-700 w-max", isActive ? "font-semibold" : "", "button")
 								}
 							>
 								About
@@ -48,7 +40,7 @@ export default function Footer() {
 								href="/chibuike-maduabuchi-resume.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-gray-700 hover:underline"
+								className="w-max button"
 							>
 								Resume
 							</a>
@@ -61,7 +53,7 @@ export default function Footer() {
 								href="https://www.linkedin.com/in/chibuike-maduabuchi"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-gray-700 hover:underline"
+								className="button w-max"
 							>
 								Linkedin
 							</a>
@@ -69,7 +61,7 @@ export default function Footer() {
 								href="https://github.com/Chibuike-web"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-gray-700 hover:underline"
+								className="button w-max"
 							>
 								Github
 							</a>
@@ -77,7 +69,7 @@ export default function Footer() {
 								href="https://codepen.io/chibuike-web"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-gray-700 hover:underline"
+								className="button w-max"
 							>
 								Codepen
 							</a>
@@ -85,7 +77,7 @@ export default function Footer() {
 								href="https://dribbble.com/maduabuchichibuike"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-gray-700 hover:underline"
+								className="button"
 							>
 								Dribbble
 							</a>

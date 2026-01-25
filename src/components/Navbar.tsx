@@ -18,12 +18,12 @@ const DesktopNav = () => {
 				<Button as="link" to="/" className="w-full">
 					<Logo className=" text-gray-700" />
 				</Button>
-				<div className="bg-gray-100 flex items-center w-full max-w-max gap-1 p-1 rounded-full">
+				<div className="flex items-center w-full justify-between p-1 rounded-full">
 					<NavLink
 						to="/"
 						className={({ isActive }) =>
-							`w-[112px] h-[36px] flex items-center justify-center rounded-full focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-100 ${
-								isActive ? "bg-white text-gray-700 font-semibold " : "text-gray-500 font-normal"
+							`button h-[36px] flex items-center justify-center focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300 ${
+								isActive ? "text-gray-700 font-semibold" : "text-gray-500 font-normal"
 							}`
 						}
 					>
@@ -32,8 +32,8 @@ const DesktopNav = () => {
 					<NavLink
 						to="/about"
 						className={({ isActive }) =>
-							`w-[112px] h-[36px] flex items-center justify-center rounded-full focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-100 ${
-								isActive ? "bg-white text-gray-700 font-semibold" : "text-gray-500 font-normal"
+							`button h-[36px] flex items-center justify-center focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300 ${
+								isActive ? "text-gray-700 font-semibold" : "text-gray-500 font-normal"
 							}`
 						}
 					>
@@ -43,7 +43,7 @@ const DesktopNav = () => {
 						href="https://drive.google.com/file/d/1-Pp56NqO3jCauLwMdeoSMwgWw7UvlGnD/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="w-[112px] h-[36px] flex items-center justify-center rounded-full text-gray-500  focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-100"
+						className="button h-[36px] flex items-center justify-center rounded-full text-gray-500  focus:outline-0 focus-visible:ring-2 focus-visible:ring-gray-300"
 					>
 						Resume
 					</a>
