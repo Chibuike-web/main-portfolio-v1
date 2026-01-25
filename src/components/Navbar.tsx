@@ -14,8 +14,8 @@ const DesktopNav = () => {
 	const time = useRealTime();
 	return (
 		<nav className="bg-white py-[22px]">
-			<header className="mx-auto w-full max-w-[1296px] grid grid-cols-3 place-items-center gap-6 px-6 xl:px-0">
-				<Button as="link" to="/" className="w-full">
+			<header className="mx-auto w-full max-w-[1296px] grid grid-cols-[1fr_250px_1fr] gap-6 px-6 xl:px-0">
+				<Button as="link" to="/" className="w-max">
 					<Logo className=" text-gray-700" />
 				</Button>
 				<div className="flex items-center w-full justify-between p-1 rounded-full">

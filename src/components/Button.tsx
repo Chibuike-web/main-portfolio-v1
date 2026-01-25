@@ -55,7 +55,7 @@ const buttonVariants = cva(
 				as: "button",
 			},
 		},
-	}
+	},
 );
 
 const MotionButton = motion.create(Button);

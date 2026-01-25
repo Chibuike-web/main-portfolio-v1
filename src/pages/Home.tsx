@@ -116,11 +116,12 @@ const CopyEmail = () => {
 };
 
 const Section = () => {
-	const [searchParams, setSearchParams] = useSearchParams();
+	const [searchParams, setSearchParams] = useSearchParams("");
 
 	const category = searchParams.get("category") ?? "all";
 	const filteredProjects =
 		category === "all" ? projects : projects.filter((p) => p.category === category);
+
 	return (
 		<Tabs.Root
 			value={category}
@@ -153,10 +154,8 @@ const Section = () => {
 					</Tabs.Trigger>
 				))}
 			</Tabs.List>
-			<Tabs.Content
-				value={category}
-				className="focus:outline-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]"
-			>
+
+			<div className="focus:outline-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]">
 				{filteredProjects.map((item, i) => (
 					<MotionComponent
 						key={item.id}
@@ -181,7 +180,7 @@ const Section = () => {
 						</Card>
 					</MotionComponent>
 				))}
-			</Tabs.Content>
+			</div>
 		</Tabs.Root>
 	);
 };
