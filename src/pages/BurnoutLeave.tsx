@@ -1,5 +1,5 @@
 import { CancelIcon } from "../assets/icons";
-import Button from "../components/Button";
+import { Button } from "../components/Button";
 import heroImage from "../assets/burnout-leave/hero-image.webp";
 import firstImage from "../assets/burnout-leave/first.webp";
 import secondImage from "../assets/burnout-leave/second.webp";
@@ -15,11 +15,11 @@ import eleventhImage from "../assets/burnout-leave/eleventh.webp";
 import twelfthImage from "../assets/burnout-leave/twelfth.webp";
 import { LazyImage } from "../components/LazyImage";
 
-export default function BurnoutLeave() {
+export function BurnoutLeave() {
 	return (
-		<main className="w-full max-w-[1296px] mx-auto px-6 xl:px-0 ">
-			<nav className="w-full flex justify-between items-center py-8 text-[14px] md:text-[16px]">
-				<header className="flex flex-col gap-[10px]">
+		<main className="w-full max-w-[81rem] mx-auto px-6 xl:px-0 ">
+			<nav className="w-full flex justify-between items-center py-8 text-sm md:text-base">
+				<header className="flex flex-col gap-2.5">
 					<p className="font-secondary font-semibold text-gray-700">BURNOUT LEAVE</p>
 					<p className="font-secondary font-semibold text-gray-500">
 						{" "}
@@ -34,7 +34,7 @@ export default function BurnoutLeave() {
 			<h1 className=" text-[2rem] md:text-[4rem] font-semibold tracking-[-0.02em]">
 				Smarter Burnout Tracking for Stronger Team Results
 			</h1>
-			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
+			<figure className="w-full xl:h-[52.5rem] mt-11 md:mt-[5.5rem] mb-[3.25rem] md:mb-[6.5rem]">
 				<img
 					src={heroImage}
 					width="1296"
@@ -46,36 +46,36 @@ export default function BurnoutLeave() {
 			</figure>
 
 			<section className="flex flex-col md:flex-row gap-6">
-				<div className="row-span-3 w-full max-w-[416px] font-secondary text-gray-700 text-[20px] md:text-[24px] font-bold font-secondarys">
+				<div className="row-span-3 w-full max-w-[26rem] font-secondary text-gray-700 text-xl md:text-2xl font-bold font-secondarys">
 					ZENLY
 				</div>
-				<div className="grid grid-cols-1 sm:grid-cols-2 max-w-[856px] gap-6">
-					<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+				<div className="grid grid-cols-1 sm:grid-cols-2 max-w-[53.5rem] gap-6">
+					<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
 						Zenly is a final project for Checklearn Intermediate UI/UX Design Batch. The idea is to
 						build a system that can anticipate each team member’s burnout state based on the mental
 						difficult of the work they have done so far. It is especially targeted at team members
 						that
 					</p>
-					<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+					<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
 						don’t utilize their annual leave opportunities for rest. We worked on a team of three
 						and alternate leadership position every week. I work on admin part of the product.
 					</p>
-					<div className="w-full flex flex-col gap-[4px]">
-						<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+					<div className="w-full flex flex-col gap-1">
+						<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 							PROBLEM STATEMENT
 						</h3>
-						<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+						<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
 							Many team members struggle to recognize early signs of burnout and often fail to take
 							annual leave until exhaustion has already affected their productivity and well-being.
 							Managers also lack clear, data-driven tools to anticipate and manage burnout risk
 							across teams, making it difficult to balance workloads and encourage timely rest.
 						</p>
 					</div>
-					<div className="w-full flex flex-col gap-[4px]">
-						<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+					<div className="w-full flex flex-col gap-1">
+						<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 							SOLUTION OVERVIEW
 						</h3>
-						<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+						<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
 							I designed the admin side of Zenly’s burnout management dashboard. From this view,
 							admins can create, edit, and delete teams, assign team leads, and configure burnout
 							limits for each group. These controls give managers the ability to monitor workload
@@ -83,26 +83,26 @@ export default function BurnoutLeave() {
 						</p>
 					</div>
 					<div className="flex gap-4 items-start w-full">
-						<div className="w-full flex flex-col gap-[4px]">
-							<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+						<div className="w-full flex flex-col gap-1">
+							<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 								ROLE
 							</h3>
-							<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+							<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
 								Product Designer
 							</p>
 						</div>
-						<div className="w-full flex flex-col gap-[4px]">
-							<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+						<div className="w-full flex flex-col gap-1">
+							<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 								DURATION
 							</h3>
-							<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
+							<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
 								1 month
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className="mt-[52px] md:mt-[104px]">
+			<section className="mt-[3.25rem] md:mt-[6.5rem]">
 				<LazyImage
 					src={firstImage}
 					alt="Image showing a single dashboard"
@@ -112,8 +112,8 @@ export default function BurnoutLeave() {
 				/>
 			</section>
 
-			<section className="mt-[52px] md:mt-[104px]">
-				<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
+			<section className="mt-[3.25rem] md:mt-[6.5rem]">
+				<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em]">
 					Create new team
 				</h2>
 				<LazyImage
@@ -132,8 +132,8 @@ export default function BurnoutLeave() {
 				/>
 			</section>
 
-			<section className="mt-[52px] md:mt-[104px]">
-				<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
+			<section className="mt-[3.25rem] md:mt-[6.5rem]">
+				<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em]">
 					Edit Team
 				</h2>
 				<LazyImage
@@ -159,8 +159,8 @@ export default function BurnoutLeave() {
 				/>
 			</section>
 
-			<section className="mt-[52px] md:mt-[104px]">
-				<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
+			<section className="mt-[3.25rem] md:mt-[6.5rem]">
+				<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em]">
 					Assign Team Lead
 				</h2>
 
@@ -180,8 +180,8 @@ export default function BurnoutLeave() {
 				/>
 			</section>
 
-			<section className="mt-[52px] md:mt-[104px]">
-				<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
+			<section className="mt-[3.25rem] md:mt-[6.5rem]">
+				<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em]">
 					Manage Team Member
 				</h2>
 
@@ -211,7 +211,7 @@ export default function BurnoutLeave() {
 					alt="Image showing a single screen"
 					width={1296}
 					height={750}
-					className="w-full mt-6 md:mt-12 mb-[52px] md:mb-[104px] rounded-[1rem] md:rounded-[2rem]"
+					className="w-full mt-6 md:mt-12 mb-[3.25rem] md:mb-[6.5rem] rounded-[1rem] md:rounded-[2rem]"
 				/>
 			</section>
 		</main>

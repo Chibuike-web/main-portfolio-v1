@@ -1,5 +1,5 @@
 import { CancelIcon } from "../assets/icons";
-import Button from "../components/Button";
+import { Button } from "../components/Button";
 import heroImage from "../assets/medibridge/hero.webp";
 import firstImage from "../assets/medibridge/first.webp";
 import secondImage from "../assets/medibridge/second.webp";
@@ -16,22 +16,22 @@ import twelfthImage from "../assets/medibridge/twelfth.webp";
 import thirteenthImage from "../assets/medibridge/thirteenth.webp";
 import { LazyImage } from "../components/LazyImage";
 
-export default function Medibridge() {
+export function Medibridge() {
 	return (
-		<main className="w-full max-w-[1296px] mx-auto px-6 xl:px-0 ">
-			<nav className="w-full flex justify-between items-center py-8 text-[14px] md:text-[16px]">
-				<header className="flex flex-col gap-[10px]">
+		<main className="w-full max-w-[81rem] mx-auto px-6 xl:px-0 ">
+			<nav className="w-full flex justify-between items-center py-8 text-sm md:text-base">
+				<header className="flex flex-col gap-2.5">
 					<p className="font-secondary font-semibold text-gray-700">AI-POWERED EHR</p>
 					<p className="font-secondary font-semibold text-gray-500"> ONE PLATFORM, EVERY PATIENT</p>
 				</header>
-				<Button as="link" to="/">
+				<Button as="link" to="/" aria-label="Back to home">
 					<CancelIcon />
 				</Button>
 			</nav>
-			<h1 className=" text-[2rem] md:text-[4rem] font-semibold tracking-[-0.02em]">
+			<h1 className="text-[2rem] md:text-[4rem] font-semibold tracking-[-0.02em] text-balance">
 				Streamlining How Records Are Captured and Shared Across Hospitals
 			</h1>
-			<figure className="w-full xl:h-[840px] mt-[44px] md:mt-[88px] mb-[52px] md:mb-[104px]">
+			<figure className="w-full xl:h-[52.5rem] mt-11 md:mt-[5.5rem] mb-[3.25rem] md:mb-[6.5rem]">
 				<img
 					src={heroImage}
 					width="1296"
@@ -41,64 +41,79 @@ export default function Medibridge() {
 				/>
 			</figure>
 			<section className="flex flex-col md:flex-row gap-6">
-				<div className="row-span-3 font-secondary w-full max-w-[416px] text-gray-700 text-[20px] md:text-[24px] font-bold font-secondarys">
+				<div className="row-span-3 font-secondary w-full max-w-[26rem] text-gray-700 text-xl md:text-2xl font-bold font-secondarys">
 					MEDIBRIDGE
 				</div>
-				<div className="grid grid-cols-1 sm:grid-cols-2 max-w-[856px] gap-6">
-					<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
-						MediBridge started as a hackathon project to solve a key challenge in healthcare: the
-						inability to easily extract and transfer medical records from physical formats. Using
-						AI, the platform helps hospitals and clinics convert scanned documents into structured
+				<div className="grid grid-cols-1 sm:grid-cols-2 max-w-[53.5rem] gap-6">
+					<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+						MediBridge started as a hackathon project focused on a healthcare gap: extracting usable
+						data from paper records and enabling secure digital transfer between providers. I
+						continued building it beyond the hackathon into a working product.
 					</p>
-					<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
-						data and securely transfer records at the patient's request. In the second iteration, I
-						redesigned the interface and system to better support clinical workflows and data
-						integrity.
+					<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+						The platform uses AI to convert scanned documents into structured patient data and
+						supports record sharing with patient approval. The second iteration focused on improving
+						clinical workflows, data integrity and human review before records are stored or shared.
 					</p>
-					<div className="w-full flex flex-col gap-[4px]">
-						<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+					<div className="w-full flex flex-col gap-1">
+						<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 							PROBLEM STATEMENT
 						</h3>
-						<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
-							Medical records are still often stored in paper-based or unstructured digital formats
-							like scanned PDFs or images. This creates friction for hospitals and clinics trying to
-							access accurate patient history, especially during inter-facility transfers. There’s
-							also no streamlined way to digitize, structure, and securely share these records on
+						<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+							Medical records are still stored in paper form or unstructured digital formats like
+							scanned PDFs or images. This creates friction for hospitals and clinics trying to
+							access accurate patient history, especially during inter facility transfers. There is
+							also no clear way to digitize structure and securely share these records based on
 							patient request.
 						</p>
 					</div>
-					<div className="w-full flex flex-col gap-[4px]">
-						<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+					<div className="w-full flex flex-col gap-1">
+						<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 							SOLUTION OVERVIEW
 						</h3>
-						<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
-							I designed an AI-powered platform that extracts structured medical data from physical
-							documents, enabling hospitals and clinics to convert and transfer patient records
-							efficiently. The redesigned experience supports record review, patient-initiated
-							transfer requests, and secure sharing between institutions.
+						<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+							I am designing and building an AI powered platform that extracts structured medical
+							data from physical documents so hospitals and clinics can digitize records and manage
+							transfers. The system supports record review before storage, patient approved transfer
+							requests and secure sharing between institutions.
 						</p>
 					</div>
 					<div className="flex gap-4 items-start w-full">
-						<div className="w-full flex flex-col gap-[4px]">
-							<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+						<div className="w-full flex flex-col gap-1">
+							<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 								ROLE
 							</h3>
-							<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
-								Product Designer
-							</p>
+							<ul className="list-none flex flex-col">
+								<li className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
+									Product Designer
+								</li>
+								<li className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
+									Product Manager
+								</li>
+								<li className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
+									Product Engineer
+								</li>
+							</ul>
 						</div>
-						<div className="w-full flex flex-col gap-[4px]">
-							<h3 className="text-[14px] md:text-[16px] text-gray-700 font-semibold font-secondary">
+						<div className="w-full flex flex-col gap-1">
+							<h3 className="text-sm md:text-base text-gray-700 font-semibold font-secondary">
 								DURATION
 							</h3>
-							<p className="w-full font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6]">
-								1 month
+							<p className="w-full font-medium text-sm md:text-base text-gray-500 leading-[1.6]">
+								Ongoing
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className="mt-[52px] md:mt-[104px]">
+			<section className="mt-[3.25rem] md:mt-[6.5rem] flex flex-col gap-6 md:gap-12">
+				<p className="w-full max-w-[53.4375rem] font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+					I wanted onboarding to feel seamless since the product is built for non technical users,
+					mainly clinicians. I chose a simple registration flow for new users. The first person to
+					sign up becomes the owner and can invite an admin to manage the account. This happens
+					after the hospital details are verified.
+				</p>
+
 				<LazyImage
 					src={firstImage}
 					alt="Image showing onboarding screen"
@@ -106,13 +121,6 @@ export default function Medibridge() {
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
-				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
-					I kept the entry screen simple and focused. When hospitals land here, they’re greeted with
-					just two clear options: Begin Registration or Log In. It’s explicit and clear what action
-					to take, whether they’re a new hospital joining the platform or an existing one returning.
-				</p>
-			</section>
-			<section className="mt-[52px] md:mt-[104px]">
 				<LazyImage
 					src={secondImage}
 					alt="Image showing signup screen"
@@ -120,39 +128,36 @@ export default function Medibridge() {
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
-				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
-					The sign-up screen is designed to clearly request the key information needed from the
-					hospital, while also providing a way to validate the hospital and user entering the
-					platform.
-				</p>
+				<LazyImage
+					src={thirdImage}
+					alt="Image showing two screens side by side — the left screen displays the institution document upload, while the right screen shows the administrator sign-up form."
+					width={1296}
+					height={750}
+					className="rounded-[1rem] md:rounded-[2rem]"
+				/>
 			</section>
-			<LazyImage
-				src={thirdImage}
-				alt="Image showing two screens side by side — the left screen displays the institution document upload, while the right screen shows the administrator sign-up form."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<LazyImage
-				src={fourthImage}
-				alt="Image showing an empty dashboard screen, ready to display hospital data once records are added."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<section className="mt-[52px] md:mt-[104px]">
-				<div className="flex flex-col gap-[10px]">
-					<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
-						Upload Patient’s Record
+
+			<section className="mt-[3.25rem] md:mt-[6.5rem] flex flex-col gap-6 md:gap-12">
+				<div className="flex flex-col gap-2.5">
+					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
+						Add new patient
 					</h2>
-					<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mb-6 md:mb-12">
-						The upload flow is designed to be quick and straightforward. Hospitals can upload
-						scanned documents, PDFs, or images of patient records. The system uses AI to extract
-						structured data, so staff don’t have to manually type in details. It’s built to save
-						time, reduce errors, and make sure the patient’s history is digitized and ready for
-						review or transfer.
+					<p className="w-full max-w-[53.4375rem] font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+						Adding a new patient is simple. Clinicians upload scanned documents or PDFs and the
+						platform extracts the key information needed to create a digital patient profile. The
+						upload supports multiple file types and batches so records can be added in one go.
+						Extracted data is structured automatically, then reviewed by a clinician before it is
+						saved. This keeps data accurate while reducing manual entry and time spent on
+						documentation.
 					</p>
 				</div>
+				<LazyImage
+					src={fourthImage}
+					alt="Image showing an empty dashboard screen, ready to display hospital data once records are added."
+					width={1296}
+					height={750}
+					className="rounded-[1rem] md:rounded-[2rem]"
+				/>
 				<LazyImage
 					src={fifthImage}
 					alt="Image showing two screens side by side — the left screen displays the “Choose or drag to upload patient’s record” modal, and the right screen shows the final uploaded state."
@@ -160,8 +165,7 @@ export default function Medibridge() {
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
-			</section>
-			<section className="mt-[52px] md:mt-[104px]">
+
 				<LazyImage
 					src={sixthImage}
 					alt="Image showing two screens side by side — the left screen displays the completed data extraction state, while the right screen shows the extracted content."
@@ -169,44 +173,45 @@ export default function Medibridge() {
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
-				<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mt-6 md:mt-12">
-					After upload, the extracted data is shown clearly so staff can review and confirm it. The
-					goal is to let hospitals quickly spot and fix any errors before saving. It keeps things
-					simple — just the key info pulled from the document, ready for review
-				</p>
+
+				<LazyImage
+					src={seventhImage}
+					alt="Image showing a filled dashboard screen with the Dashboard menu active, displaying key hospital metrics and activity."
+					width={1296}
+					height={750}
+					className="rounded-[1rem] md:rounded-[2rem]"
+				/>
 			</section>
-			<LazyImage
-				src={seventhImage}
-				alt="Image showing a filled dashboard screen with the Dashboard menu active, displaying key hospital metrics and activity."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<LazyImage
-				src={eighthImage}
-				alt="Image showing a filled dashboard screen with the Patient Records menu active, displaying existing patient records."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<LazyImage
-				src={ninthImage}
-				alt="Image showing a filled dashboard screen with the Transfers menu active, displaying existing transfer records."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<section className="mt-[52px] md:mt-[104px]">
-				<div className="flex flex-col gap-[10px]">
-					<h2 className="text-[24px] md:text-[48px] font-semibold text-gray-700 tracking-[-0.02em]">
-						New Transfer Request
+
+			<section className="mt-[3.25rem] md:mt-[6.5rem] flex flex-col gap-6 md:gap-12">
+				<div className="flex flex-col gap-2.5">
+					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
+						Transfer patient record
 					</h2>
-					<p className="w-full max-w-[855px] font-medium text-[14px] md:text-[16px] text-gray-500 leading-[1.6] mb-6 md:mb-12">
-						To start a transfer, the hospital selects a patient, enters the receiving hospital’s
-						details, and picks the records to send. They choose the format, add any notes, and
-						submit. But nothing moves until the patient approves
+					<p className="w-full max-w-[53.4375rem] font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
+						To transfer records, the patient must already exist in the system with their records. A
+						clinician selects the patient, chooses the receiving hospital and picks the format for
+						sharing such as PDF, image or document file. Instead of sending the records immediately,
+						the platform sends a transfer request to the patient for approval. Once approved, the
+						records are sent to the target hospital.
 					</p>
 				</div>
+
+				<LazyImage
+					src={eighthImage}
+					alt="Image showing a filled dashboard screen with the Patient Records menu active, displaying existing patient records."
+					width={1296}
+					height={750}
+					className="rounded-[1rem] md:rounded-[2rem]"
+				/>
+				<LazyImage
+					src={ninthImage}
+					alt="Image showing a filled dashboard screen with the Transfers menu active, displaying existing transfer records."
+					width={1296}
+					height={750}
+					className="rounded-[1rem] md:rounded-[2rem]"
+				/>
+
 				<LazyImage
 					src={tenthImage}
 					alt="Image showing two screens Image showing two modals side by side — the left modal displays the patient selection in an inactive state, while the right modal shows the active state with the dropdown expanded."
@@ -215,27 +220,46 @@ export default function Medibridge() {
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 			</section>
-			<LazyImage
-				src={eleventhImage}
-				alt="Image showing two modals side by side — the left modal displays empty fields for the target hospital name and admin email, while the right modal shows the same fields filled out."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<LazyImage
-				src={twelfthImage}
-				alt="Image showing two modals side by side — the left modal displays empty fields for clinical document, format, and extra note, while the right modal shows the same fields filled out."
-				width={1296}
-				height={750}
-				className="mt-[52px] md:mt-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
-			<LazyImage
-				src={thirteenthImage}
-				alt="Image showing two review modals side by side — the left modal displays the checkbox for confirmation unchecked, while the right modal shows the same checkbox checked."
-				width={1296}
-				height={750}
-				className="my-[52px] md:my-[104px] rounded-[1rem] md:rounded-[2rem]"
-			/>
+
+			<section className="mt-[3.25rem] md:mt-[6.5rem] flex flex-col gap-6 md:gap-12">
+				<div className="mt-6 md:mt-12">
+					s{" "}
+					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
+						Overview
+					</h2>
+					<LazyImage
+						src={eleventhImage}
+						alt="Image showing two modals side by side — the left modal displays empty fields for the target hospital name and admin email, while the right modal shows the same fields filled out."
+						width={1296}
+						height={750}
+						className="mt-6 md:mt-12 rounded-[1rem] md:rounded-[2rem]"
+					/>
+				</div>
+				<div className="mt-6 md:mt-12">
+					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
+						Patient Records
+					</h2>
+					<LazyImage
+						src={twelfthImage}
+						alt="Image showing two modals side by side — the left modal displays empty fields for clinical document, format, and extra note, while the right modal shows the same fields filled out."
+						width={1296}
+						height={750}
+						className="mt-6 md:mt-12 rounded-[1rem] md:rounded-[2rem]"
+					/>
+				</div>
+				<div className="mb-[3.25rem] md:mb-[6.5rem] mt-6 md:mt-12">
+					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
+						Transfers
+					</h2>
+					<LazyImage
+						src={thirteenthImage}
+						alt="Image showing two review modals side by side — the left modal displays the checkbox for confirmation unchecked, while the right modal shows the same checkbox checked."
+						width={1296}
+						height={750}
+						className="mt-6 md:mt-12 rounded-[1rem] md:rounded-[2rem]"
+					/>
+				</div>
+			</section>
 		</main>
 	);
 }

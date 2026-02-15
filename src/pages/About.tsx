@@ -1,13 +1,13 @@
 import image from "../assets/image.png";
 
-export default function About() {
+export function About() {
 	return (
-		<main className="mx-auto w-full max-w-[1296px] flex flex-col justify-between px-6 xl:px-0">
-			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6 mt-[52px] lg:mt-[104px]">
+		<main className="mx-auto w-full max-w-[81rem] flex flex-col justify-between px-6 xl:px-0">
+			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-6 mt-[3.25rem] lg:mt-[6.5rem]">
 				<img
 					src={image}
 					alt="A portrait of Chibuike"
-					className="w-full rounded-[16px] md:rounded-[20px]"
+					className="w-full rounded-2xl md:rounded-[1.25rem]"
 					width={416}
 					height={419}
 				/>
@@ -15,7 +15,7 @@ export default function About() {
 					<h1 className="text-[2rem] md:text-[4rem] font-semibold text-gray-700">
 						Hi, I'm Chibuike Maduabuchi
 					</h1>
-					<div className="text-gray-500 text-[18px] leading-[1.6] space-y-3.5 col-span-2">
+					<div className="text-gray-500 text-lg leading-[1.6] space-y-3.5 col-span-2">
 						<p>
 							I’ve always been drawn to how things fit together, how small parts connect to create
 							something bigger. That mindset led me to study Civil Engineering.
@@ -38,7 +38,7 @@ export default function About() {
 					</div>
 				</div>
 			</section>
-			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-6 mt-[52px] lg:mt-[104px]">
+			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-6 mt-[3.25rem] lg:mt-[6.5rem]">
 				<p className="font-secondary font-medium tracking-[0.08em] text-gray-500">EXPERIENCE</p>
 				<div className="col-span-2 flex flex-col gap-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4">
@@ -72,7 +72,7 @@ export default function About() {
 				</div>
 			</section>
 
-			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-6 my-[52px] lg:my-[104px]">
+			<section className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-6 my-[3.25rem] lg:my-[6.5rem]">
 				<p className="font-secondary font-medium tracking-[0.08em] text-gray-500">EDUCATION</p>
 				<div className="col-span-2 flex flex-col gap-10">
 					<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-6 gap-y-4 ">

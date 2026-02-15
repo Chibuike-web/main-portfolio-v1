@@ -4,14 +4,14 @@ import { AnimatePresence, motion } from "motion/react";
 import { useCopyEmail } from "../hooks/useCopyEmail";
 import { cn } from "../lib/utils";
 
-export default function Footer() {
+export function Footer() {
 	const { copyStatus, copyEmail } = useCopyEmail();
 
 	return (
 		<footer className="py-10 text-gray-700 bg-white">
-			<div className="mx-auto w-full max-w-[1296px] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
+			<div className="mx-auto w-full max-w-[81rem] grid grid-cols-1 md:grid-cols-3 gap-12 xl:gap-6 px-6 xl:px-0">
 				<div>
-					<p className="font-semibold text-gray-700 leading-[1.6] max-w-[259px]">
+					<p className="font-semibold text-gray-700 leading-[1.6] max-w-[16.1875rem]">
 						Designed and Developed by Chibuike ©2026
 					</p>
 				</div>
@@ -109,7 +109,7 @@ export default function Footer() {
 						</AnimatePresence>
 					</div>
 					<button
-						className="flex gap-[6px] mt-auto items-center w-max"
+						className="flex gap-1.5 mt-auto items-center w-max"
 						onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 					>
 						<BackArrowIcon /> <span className="font-semibold">Back to the top</span>

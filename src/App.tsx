@@ -1,18 +1,18 @@
 import { Routes, Route } from "react-router";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import ScrollToTop from "./ScrollToTop";
-import BulkAirtime from "./pages/BulkAirtime";
-import SmartTicketing from "./pages/SmartTicketing";
-import Medibridge from "./pages/Medibridge";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { ScrollToTop } from "./ScrollToTop";
+import { BulkAirtime } from "./pages/BulkAirtime";
+import { SmartTicketing } from "./pages/SmartTicketing";
+import { Medibridge } from "./pages/Medibridge";
 import { ReactLenis, type LenisRef } from "lenis/react";
 import { useEffect, useRef } from "react";
 import { cancelFrame, frame } from "motion/react";
-import BurnoutLeave from "./pages/BurnoutLeave";
-import Layout from "./pages/Layout";
+import { BurnoutLeave } from "./pages/BurnoutLeave";
+import { Layout } from "./pages/Layout";
 
-export default function App() {
+export function App() {
 	const lenisRef = useRef<LenisRef>(null);
 
 	useEffect(() => {

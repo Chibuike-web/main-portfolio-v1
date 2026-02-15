@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CopyIcon, LinkedinLogo, RightArrowIcon } from "../assets/icons";
 import { CustomMotion } from "../components/Button";
-import Card from "../components/Card";
+import { Card } from "../components/Card";
 import { motion, AnimatePresence } from "motion/react";
 import { useSearchParams } from "react-router";
 import { useCopyEmail } from "../hooks/useCopyEmail";
@@ -10,7 +10,7 @@ import { filter } from "../lib/filter";
 import { projects, type ProjectType } from "../lib/data";
 import { Tabs } from "radix-ui";
 
-export default function Home() {
+export function Home() {
 	return (
 		<>
 			<Hero />
@@ -21,8 +21,8 @@ export default function Home() {
 
 const Hero = () => {
 	return (
-		<section className="grid grid-cols-1 md:grid-cols-3 md:gap-x-6 gap-y-5 md:gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] sm:mt-[104px]">
-			<h1 className="flex flex-col gap-1 font-semibold tracking-[-0.02em] text-[clamp(2rem,calc(3vw+2vh),4rem)] col-span-3 lg:col-span-2 text-gray-700">
+		<section className="grid grid-cols-1 md:grid-cols-3 md:gap-x-6 gap-y-5 md:gap-y-10 mx-auto w-full max-w-[81rem] px-6 xl:px-0 mt-[3.25rem] sm:mt-[6.5rem]">
+			<h1 className="flex flex-col gap-1 font-semibold tracking-[-0.02em] text-[clamp(2rem,calc(3vw+2vh),4rem)] col-span-3 lg:col-span-2 text-gray-700 text-balance">
 				<MotionComponent
 					as="span"
 					initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
@@ -46,7 +46,7 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
 					animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 					transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-					className="leading-[1.6] text-gray-500 font-medium w-full"
+						className="leading-[1.6] text-gray-500 font-medium w-full text-pretty"
 				>
 					I’m a hybrid of{" "}
 					<span className="font-semibold text-gray-700">designer and developer</span>. I blend{" "}
@@ -72,7 +72,7 @@ const Hero = () => {
 							href="https://www.linkedin.com/in/chibuike-maduabuchi"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex gap-[6px] items-center bg-gray-100 text-gray-700 rounded-full"
+							className="flex gap-1.5 items-center bg-gray-100 text-gray-700 rounded-full"
 						>
 							Linkedin <LinkedinLogo />
 						</CustomMotion>
@@ -91,7 +91,7 @@ const CopyEmail = () => {
 			<CustomMotion
 				size="sm"
 				variant="secondary"
-				className="flex gap-[6px] rounded-full"
+				className="flex gap-1.5 rounded-full"
 				onClick={copyEmail}
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 0.95 }}
@@ -131,7 +131,7 @@ const Section = () => {
 		>
 			<Tabs.List
 				defaultValue="all"
-				className="flex gap-2 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mt-[52px] md:mt-[104px]"
+				className="flex gap-2 mx-auto w-full max-w-[81rem] px-6 xl:px-0 mt-[3.25rem] md:mt-[6.5rem]"
 			>
 				{filter.map((c, i) => (
 					<Tabs.Trigger
@@ -147,7 +147,7 @@ const Section = () => {
 							viewport={{ once: true, amount: 0.2 }}
 							key={c.id}
 							variant={category === c.id ? "primary" : "secondary"}
-							className="py-[10px] px-[14px]"
+							className="py-2.5 px-3.5"
 						>
 							{c.text}
 						</CustomMotion>
@@ -155,7 +155,7 @@ const Section = () => {
 				))}
 			</Tabs.List>
 
-			<div className="focus:outline-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[1296px] px-6 xl:px-0 mb-[52px] mt-[20px] md:mb-[104px] md:mt-[40px]">
+			<div className="focus:outline-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 mx-auto w-full max-w-[81rem] px-6 xl:px-0 mb-[3.25rem] mt-5 md:mb-[6.5rem] md:mt-10">
 				{filteredProjects.map((item, i) => (
 					<MotionComponent
 						key={item.id}
@@ -169,7 +169,7 @@ const Section = () => {
 								<img src={item.image} alt={item.title} className="w-full h-full object-cover" />
 							</Card.Image>
 							<Card.Content>
-								<div className="flex flex-col gap-[10px] px-1">
+								<div className="flex flex-col gap-2.5 px-1">
 									<Card.Title>
 										<h3>{item.title.toUpperCase()}</h3> <p>{item.year}</p>
 									</Card.Title>
@@ -191,7 +191,7 @@ const Buttons = ({ type }: { type: ProjectType | ProjectType[] }) => {
 	return (
 		<>
 			{Array.isArray(type) ? (
-				<div className="flex gap-[10px]">
+				<div className="flex gap-2.5">
 					<CustomMotion
 						variant="primary"
 						size="md"

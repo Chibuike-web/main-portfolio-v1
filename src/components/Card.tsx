@@ -1,52 +1,49 @@
 import { cn } from "../lib/utils";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function Card({ className, ...props }: CardProps) {
+export function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
 	return <div className={cn(" bg-white flex flex-col gap-4 ", className)} {...props} />;
 }
 
-interface CardImageProps extends React.HTMLAttributes<HTMLElement> {}
-
-Card.Image = function CardImage({ className, ...props }: CardImageProps) {
+Card.Image = function CardImage({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
 	return (
 		<figure
 			className={cn(
-				"w-full h-[250px] sm:h-[350px] rounded-[16px] md:rounded-[20px] overflow-hidden",
-				className
+				"w-full h-[15.625rem] sm:h-[21.875rem] rounded-2xl md:rounded-[1.25rem] overflow-hidden",
+				className,
 			)}
 			{...props}
 		/>
 	);
 };
 
-interface CardContentProps extends React.HtmlHTMLAttributes<HTMLElement> {}
-Card.Content = function CardContent({ className, ...props }: CardContentProps) {
+Card.Content = function CardContent({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
 	return (
 		<div
-			className={cn("flex flex-col gap-6 text-[14px] md:text-[16px] leading-[1em]", className)}
+			className={cn("flex flex-col gap-6 text-sm md:text-base leading-[1em]", className)}
 			{...props}
 		/>
 	);
 };
 
-interface CardTitleProps extends React.HTMLAttributes<HTMLParagraphElement> {}
-
-Card.Title = function CardTitle({ className, ...props }: CardTitleProps) {
+Card.Title = function CardTitle({
+	className,
+	...props
+}: React.HTMLAttributes<HTMLDivElement>) {
 	return (
 		<div
 			className={cn(
 				"flex items-center justify-between font-semibold font-secondary text-gray-500",
-				className
+				className,
 			)}
 			{...props}
 		/>
 	);
 };
 
-interface CardSubTitleProps extends React.HTMLAttributes<HTMLParagraphElement> {}
-
-Card.SubTitle = function CardSubTitle({ className, ...props }: CardSubTitleProps) {
+Card.SubTitle = function CardSubTitle({
+	className,
+	...props
+}: React.HTMLAttributes<HTMLParagraphElement>) {
 	return (
 		<p
 			className={cn("font-semibold font-secondary text-gray-700 truncate min-w-0", className)}
@@ -55,4 +52,3 @@ Card.SubTitle = function CardSubTitle({ className, ...props }: CardSubTitleProps
 	);
 };
 
-export default Card;

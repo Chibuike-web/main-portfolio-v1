@@ -19,7 +19,7 @@ type ButtonAsLink = BaseProps & LinkProps & { as: "link"; to: string };
 
 type ButtonProps = ButtonAsButton | ButtonAsAnchor | ButtonAsLink;
 
-export default function Button({ className, variant, size, fullWidth, as, ...props }: ButtonProps) {
+export function Button({ className, variant, size, fullWidth, as, ...props }: ButtonProps) {
 	const classes = cn(buttonVariants({ variant, size, fullWidth }), className);
 	if (as === "a") {
 		return <a className={classes} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)} />;
@@ -36,13 +36,13 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
-				primary: "pl-[16px] pr-[14px] bg-gray-700 text-white",
-				secondary: "pl-[16px] pr-[14px] bg-gray-100 text-gray-700",
+				primary: "pl-4 pr-3.5 bg-gray-700 text-white",
+				secondary: "pl-4 pr-3.5 bg-gray-100 text-gray-700",
 			},
 			size: {
-				sm: "h-[36px]  text-sm",
-				md: "h-[40px]  text-sm",
-				lg: "h-[48px]  text-base",
+				sm: "h-9  text-sm",
+				md: "h-10  text-sm",
+				lg: "h-12  text-base",
 			},
 			fullWidth: {
 				true: "w-full",
