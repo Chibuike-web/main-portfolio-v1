@@ -123,14 +123,14 @@ export function Medibridge() {
 				/>
 				<LazyImage
 					src={secondImage}
-					alt="Image showing signup screen"
+					alt="Image showing two screens side by side — the left screen displays the 'owner account setup form' and the right screen hospital details form."
 					width={1296}
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 				<LazyImage
 					src={thirdImage}
-					alt="Image showing two screens side by side — the left screen displays the institution document upload, while the right screen shows the administrator sign-up form."
+					alt="Image showing invite admin form and complete account setup form"
 					width={1296}
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
@@ -140,27 +140,28 @@ export function Medibridge() {
 			<section className="mt-[3.25rem] md:mt-[6.5rem] flex flex-col gap-6 md:gap-12">
 				<div className="flex flex-col gap-2.5">
 					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
-						Add new patient
+						Add new patients
 					</h2>
 					<p className="w-full max-w-[53.4375rem] font-medium text-sm md:text-base text-gray-500 leading-[1.6] text-pretty">
-						Adding a new patient is simple. Clinicians upload scanned documents or PDFs and the
-						platform extracts the key information needed to create a digital patient profile. The
-						upload supports multiple file types and batches so records can be added in one go.
-						Extracted data is structured automatically, then reviewed by a clinician before it is
-						saved. This keeps data accurate while reducing manual entry and time spent on
-						documentation.
+						Adding a new patient is streamlined for bulk onboarding. Clinicians upload individual
+						documents, each representing a single patient. The system extracts key personal and
+						clinical details from each file to generate separate digital patient profiles. Multiple
+						patient documents can be uploaded at once, allowing several profiles to be created in a
+						single session. Extracted data is structured automatically and presented for clinician
+						review before confirmation. This maintains accuracy while reducing manual entry and the
+						time spent onboarding new patients.
 					</p>
 				</div>
 				<LazyImage
 					src={fourthImage}
-					alt="Image showing an empty dashboard screen, ready to display hospital data once records are added."
+					alt="Image showing an empty dashboard screen."
 					width={1296}
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
 				/>
 				<LazyImage
 					src={fifthImage}
-					alt="Image showing two screens side by side — the left screen displays the “Choose or drag to upload patient’s record” modal, and the right screen shows the final uploaded state."
+					alt=""
 					width={1296}
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
@@ -168,7 +169,7 @@ export function Medibridge() {
 
 				<LazyImage
 					src={sixthImage}
-					alt="Image showing two screens side by side — the left screen displays the completed data extraction state, while the right screen shows the extracted content."
+					alt=""
 					width={1296}
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
@@ -176,7 +177,7 @@ export function Medibridge() {
 
 				<LazyImage
 					src={seventhImage}
-					alt="Image showing a filled dashboard screen with the Dashboard menu active, displaying key hospital metrics and activity."
+					alt=""
 					width={1296}
 					height={750}
 					className="rounded-[1rem] md:rounded-[2rem]"
@@ -223,7 +224,6 @@ export function Medibridge() {
 
 			<section className="mt-[3.25rem] md:mt-[6.5rem] flex flex-col gap-6 md:gap-12">
 				<div className="mt-6 md:mt-12">
-					s{" "}
 					<h2 className="text-2xl md:text-5xl font-semibold text-gray-700 tracking-[-0.02em] text-balance">
 						Overview
 					</h2>
