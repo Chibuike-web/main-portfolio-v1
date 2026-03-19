@@ -46,7 +46,7 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
 					animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 					transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
-						className="leading-[1.6] text-gray-500 font-medium w-full text-pretty"
+					className="leading-[1.6] text-gray-500 font-medium w-full text-pretty"
 				>
 					I’m a hybrid of{" "}
 					<span className="font-semibold text-gray-700">designer and developer</span>. I blend{" "}
@@ -117,16 +117,24 @@ const CopyEmail = () => {
 
 const Section = () => {
 	const [searchParams, setSearchParams] = useSearchParams("");
-
 	const category = searchParams.get("category") ?? "all";
+	const selectedCategory = category === "design" || category === "engineering" ? category : "all";
+
 	const filteredProjects =
-		category === "all" ? projects : projects.filter((p) => p.category === category);
+		selectedCategory === "all"
+			? projects
+			: projects.filter((project) => project.category === selectedCategory);
 
 	return (
 		<Tabs.Root
-			value={category}
+			value={selectedCategory}
 			onValueChange={(value) => {
-				setSearchParams({ category: value });
+				if (value === "all") {
+					setSearchParams({}, { replace: true });
+					return;
+				}
+
+				setSearchParams({ category: value }, { replace: true });
 			}}
 		>
 			<Tabs.List
