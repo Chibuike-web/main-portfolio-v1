@@ -1,3 +1,10 @@
 {
-	"rewrites": [{ "source": "/(.*)", "destination": "/" }]
+	"rewrites": [{ "source": "/(.*)", "destination": "/" }],
+	"redirects": [
+		{
+			"source": "/",
+			"destination": "https://chibuike-maduabuchi.vercel.app/",
+			"permanent": true
+		}
+	]
 }
